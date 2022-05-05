@@ -17,9 +17,6 @@
       "test/dest/*"
     ]
   },
-  "hooks": {
-  	"per-commit": "build"
-  },
   "author": "n1k1t",
   "license": "ISC",
   "devDependencies": {
