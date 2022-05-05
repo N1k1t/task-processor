@@ -1,7 +1,7 @@
 {
   "name": "@n1k1t/task-processor",
   "version": "0.1.0",
-  "description": "",
+  "description": "Runner for background and cli tasks with SASS/CommonJS bundlers using native multithreading",
   "main": "dist/lib/index.js",
   "scripts": {
     "start": "node dist/lib/index",
