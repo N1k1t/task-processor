@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../lib/processors/index.ts"],"names":[],"mappings":";;;;;;AAAA,sEAAmF;AACnF,0DAAiE;AACjE,8DAAuE;AACvE,8DAAuE;AACvE,8DAAuE;AACvE,8DAAuE;AAe1D,QAAA,UAAU,GAAsF;IAC5G,iBAAiB,EAAE,wBAAuB;IAC1C,WAAW,EAAE,kBAAiB;IAC9B,aAAa,EAAE,oBAAmB;IAClC,YAAY,EAAE,oBAAmB;IACjC,aAAa,EAAE,oBAAmB;IAClC,YAAY,EAAE,oBAAmB;CACjC,CAAA"}
