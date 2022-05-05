@@ -11,6 +11,7 @@ const path_1 = __importDefault(require("path"));
 const lodash_1 = __importDefault(require("lodash"));
 const Console_1 = require("../Console");
 const Service_1 = require("./Service");
+/*----------  Module deps  ----------*/
 const livereloadJsFile = (0, fs_1.readFileSync)(path_1.default.resolve(__dirname, '../../../../assets/livereload.min.js'));
 const logger = (0, Console_1.buildLogger)('Livereload', 'gray');
 const { wsServer } = Service_1.livereloadService;
@@ -63,6 +64,7 @@ const webSocketMessageHandler = (connection, message) => {
         logger.error('WebSocket server can\'t resolve message:'.red, '\n', message.utf8Data, '\n', lodash_1.default.get(error, 'message', error) || 'unknown');
     }
 };
+/*----------  Exports  ----------*/
 const handleServerConnect = (port) => {
     Object.assign(Service_1.livereloadService, {
         port,

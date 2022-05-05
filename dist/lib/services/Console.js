@@ -10,6 +10,7 @@ const gradient_string_1 = __importDefault(require("gradient-string"));
 const fs_1 = require("fs");
 const path_1 = __importDefault(require("path"));
 const package_json_1 = require("../../package.json");
+/*----------  Module deps  ----------*/
 const appLabelPath = path_1.default.resolve(__dirname, '../../../assets/ascii-hello-text.txt');
 const appLabel = (0, fs_1.readFileSync)(appLabelPath).toString();
 const lineInterface = (0, readline_1.createInterface)({

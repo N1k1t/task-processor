@@ -15,9 +15,34 @@ const Console_1 = require("../Console");
 const Thread_1 = require("../Thread");
 const Server_1 = require("./Server");
 const Client_1 = require("./Client");
+/*----------  Module deps  ----------*/
 const logger = (0, Console_1.buildLogger)('Livereload', 'gray');
+/*----------  Exports  ----------*/
 var Service_1 = require("./Service");
 Object.defineProperty(exports, "livereloadService", { enumerable: true, get: function () { return Service_1.livereloadService; } });
+/**
+ * @description It starts the livereload server. If it already runs (in another process) that will create the client
+ * @return void
+ *
+ * @param {Object} options 			- Livereload options
+ * @param {number} [options.port] 	- Port of livereload server
+ *
+ * @example
+ * ```js
+ * import { registerCliTasks, useLivereloadServer } from '@n1k1t/task-processor';
+ *
+ * useLivereloadServer();
+ *
+ * registerCliTasks([
+ *   {
+ *     name: 'page-reload',
+ *     use: [
+ *       { processor: 'livereload', type: 'reload' }
+ *     ]
+ *   }
+ * ]);
+ * ```
+*/
 exports.useLivereloadServer = (0, Thread_1.useInMainThread)(({ port = 35729 } = {}) => __awaiter(void 0, void 0, void 0, function* () {
     const isPortAlreadyUsed = yield (0, tcp_port_used_1.check)(port);
     if (isPortAlreadyUsed) {

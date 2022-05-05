@@ -9,7 +9,9 @@ const lodash_1 = __importDefault(require("lodash"));
 const path_1 = __importDefault(require("path"));
 const Console_1 = require("./Console");
 const config_1 = __importDefault(require("../../config"));
+/*----------  Module deps  ----------*/
 const logger = (0, Console_1.buildLogger)('Watcher', 'magenta');
+/*----------  Exports  ----------*/
 const setupTaskWatcher = (task, handler) => {
     const watchMatches = lodash_1.default.get(task.watch, 'match', task.watch);
     const ignoreList = lodash_1.default.flatten([lodash_1.default.get(task.watch, 'ignore', [])]);

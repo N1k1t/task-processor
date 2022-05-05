@@ -18,6 +18,7 @@ const config_1 = __importDefault(require("../../../config"));
 const Console_1 = require("../Console");
 const Service_1 = require("./Service");
 const Server_1 = require("./Server");
+/*----------  Module deps  ----------*/
 const logger = (0, Console_1.buildLogger)('Livereload', 'gray');
 const { wsClient, wsServer } = Service_1.livereloadService;
 const handleClientDisconnect = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -33,6 +34,7 @@ const handleClientDisconnect = () => __awaiter(void 0, void 0, void 0, function*
         return (0, Server_1.handleServerConnect)(port);
     });
 });
+/*----------  Exports  ----------*/
 const callClientCommand = (connection) => (command, payload) => __awaiter(void 0, void 0, void 0, function* () {
     if (!connection.connected) {
         yield handleClientDisconnect();

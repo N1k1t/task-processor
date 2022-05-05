@@ -18,6 +18,7 @@ const worker_threads_1 = require("worker_threads");
 const threads_1 = require("threads");
 const os_1 = require("os");
 const config_1 = __importDefault(require("../../config"));
+/*----------  Module deps  ----------*/
 const instance = {
     pool: { queue: () => __awaiter(void 0, void 0, void 0, function* () { return null; }) },
     tasks: {
@@ -26,6 +27,7 @@ const instance = {
     }
 };
 const spawnThreads = () => Object.assign(instance, { pool: (0, threads_1.Pool)(() => (0, threads_1.spawn)(new threads_1.Worker('./TaskWorker')), (0, os_1.cpus)().length) });
+/*----------  Exports  ----------*/
 var worker_threads_2 = require("worker_threads");
 Object.defineProperty(exports, "isMainThread", { enumerable: true, get: function () { return worker_threads_2.isMainThread; } });
 const useInMainThread = (fn) => {
@@ -57,6 +59,37 @@ const getTaskContext = (type, task) => {
     return result || task;
 };
 exports.getTaskContext = getTaskContext;
+/**
+ * @description It creates threads for running tasks there
+ * @return void
+ *
+ * @param {Object} options 				- Threads options
+ * @param {number} options.execPath 	- Path of root module which register tasks.
+ * 		It's required because it's imposible to forward functions to threads with original lexical enviromnent,
+ * 		closure and etc. That helps to forward full tasks context to threads
+ *
+ * @example
+ * ```js
+ * import { registerCliTasks, useThreads } from '@n1k1t/task-processor';
+ *
+ * useThreads({ execPath: module.filepath });
+ *
+ * registerCliTasks([
+ *   {
+ *     name: 'some-heavy-task-1',
+ *     use: [...]
+ *   },
+ *   {
+ *     name: 'some-heavy-task-2',
+ *     use: [...]
+ *   },
+ *   {
+ *     name: 'some-heavy-task-3',
+ *     use: [...]
+ *   }
+ * ]);
+ * ```
+*/
 exports.useThreads = (0, exports.useInMainThread)(({ execPath }) => {
     if (typeof execPath !== 'string') {
         throw new Error([

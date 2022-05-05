@@ -27,6 +27,7 @@ const Console_1 = require("./Console");
 const processors_1 = require("../processors");
 const Context_1 = require("./Context");
 const Thread_1 = require("./Thread");
+/*----------  Module deps  ----------*/
 const logger = (0, Console_1.buildLogger)(Thread_1.isMainThread ? 'Worker' : `Worker #${worker_threads_1.threadId}`, 'cyan');
 const breakSymbol = Symbol('Break');
 const addFilesToContext = (task, details, runnerContext) => __awaiter(void 0, void 0, void 0, function* () {
@@ -38,6 +39,7 @@ const addFilesToContext = (task, details, runnerContext) => __awaiter(void 0, vo
         path: details.addFiles.path
     });
 });
+/*----------  Exports  ----------*/
 const runTask = (inputedTask, details) => __awaiter(void 0, void 0, void 0, function* () {
     (0, Thread_1.loadTasksContext)(details.config.execPath);
     const task = (0, Thread_1.getTaskContext)(details.type, inputedTask);
@@ -69,6 +71,7 @@ const runTask = (inputedTask, details) => __awaiter(void 0, void 0, void 0, func
     return (0, Context_1.toThreadContext)(runnerContext);
 });
 exports.runTask = runTask;
+/*----------  Thread deps  ----------*/
 if (!Thread_1.isMainThread) {
     const workerModule = { runTask: exports.runTask };
     (0, worker_1.expose)(workerModule);

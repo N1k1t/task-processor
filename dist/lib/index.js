@@ -18,6 +18,7 @@ const glob_1 = __importDefault(require("glob"));
 const util_1 = require("util");
 const config_1 = __importDefault(require("../config"));
 const services_1 = require("./services");
+/*----------  Module deps  ----------*/
 const findFiles = (0, util_1.promisify)(glob_1.default);
 const logger = (0, services_1.buildLogger)('System', 'yellow');
 (0, services_1.useInMainThread)(() => (0, services_1.printHello)())();
@@ -33,9 +34,40 @@ const handleLineCommand = (tasks, command) => __awaiter(void 0, void 0, void 0, 
     })));
     (0, services_1.handleTask)(task, { config: config_1.default, type: 'cli', addFiles: { path: lodash_1.default.uniq(lodash_1.default.flatten(results)) } });
 });
+/*----------  Exports  ----------*/
 var services_2 = require("./services");
 Object.defineProperty(exports, "useLivereloadServer", { enumerable: true, get: function () { return services_2.useLivereloadServer; } });
 Object.defineProperty(exports, "useThreads", { enumerable: true, get: function () { return services_2.useThreads; } });
+/**
+ * @description Register tasks for exec it from command line
+ * @return void
+ *
+ * @param {ICliTask[]} tasks 						- Array of tasks
+ * @param {string} task.name 						- Name of the task (should be unique)
+ * @param {string} [task.description]				- Description of the task (will printed in console)
+ *
+ * @param {string|string[]|Object} [task.add] 		- Minimatch file path(s) that will added to task or object with params
+ * @param {string|string[]} task.add.path 			- Minimatch file path(s) that will added to task
+ *
+ * @param {Object[]} task.use 						- Array of task processors
+ *
+ * @example
+ * ```js
+ * import { registerCliTasks } from '@n1k1t/task-processor';
+ *
+ * registerCliTasks([
+ *   {
+ *     name: 'css',
+ *     add: { path: 'test/src/main.scss' },
+ *     use: [
+ *       { processor: 'sass-bundle' },
+ *       { processor: 'write-files', dir: 'test/dest', name: 'result' },
+ *       { processor: 'livereload', type: 'inject' }
+ *     ]
+ *   }
+ * ]);
+ * ```
+*/
 const registerCliTasks = (tasks) => {
     if (!services_1.isMainThread) {
         return (0, services_1.registerThreadTaskContext)('cli', tasks);
@@ -45,6 +77,38 @@ const registerCliTasks = (tasks) => {
     (0, services_1.useLineInterface)(tasks, line => handleLineCommand(tasksMap, line));
 };
 exports.registerCliTasks = registerCliTasks;
+/**
+ * @description Register tasks for running in background (for example, exec task over file changes watcher)
+ * @return void
+ *
+ * @param {IBackgroundTask[]} tasks 				- Array of tasks
+ * @param {string} task.name 						- Name of the task (should be unique)
+ * @param {string} [task.description]				- Description of the task (will printed in console)
+ *
+ * @param {string|string[]|Object} [task.watch] 	- Minimatch file path(s) for file changes watcher or object with params
+ * @param {string|string[]} task.watch.path 		- Minimatch file path(s) for file changes watcher
+ * @param {string|string[]} [task.watch.ignore] 	- Minimatch of ignore files
+ * @param {boolean} [task.watch.triggerOnly=false] 	- Use files watcher for task triggering only
+ *
+ * @param {Object[]} task.use 						- Array of task processors
+ *
+ * @example
+ * ```js
+ * import { registerBackgroundTasks } from '@n1k1t/task-processor';
+ *
+ * registerBackgroundTasks([
+ *   {
+ *     name: 'css',
+ *     watch: { match: 'test/src/*.scss', ignore: ['_*.scss', '*.*.scss'] },
+ *     use: [
+ *       { processor: 'sass-bundle' },
+ *       { processor: 'write-files', dir: 'test/dest' },
+ *       { processor: 'livereload', type: 'inject' }
+ *     ]
+ *   }
+ * ]);
+ * ```
+*/
 const registerBackgroundTasks = (tasks) => {
     if (!services_1.isMainThread) {
         return (0, services_1.registerThreadTaskContext)('background', tasks);

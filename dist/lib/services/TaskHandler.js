@@ -17,6 +17,7 @@ const lodash_1 = __importDefault(require("lodash"));
 const services_1 = require("../services");
 const TaskWorker_1 = require("./TaskWorker");
 const config_1 = __importDefault(require("../../config"));
+/*----------  Module deps  ----------*/
 const logger = (0, services_1.buildLogger)(`Master`, 'green');
 const handleLivereloadTask = ({ files, livereload: { action } }) => {
     switch (action) {
@@ -39,6 +40,7 @@ const processTask = (task, details) => __awaiter(void 0, void 0, void 0, functio
     }
     return context;
 });
+/*----------  Exports  ----------*/
 const handleTask = (task, details) => __awaiter(void 0, void 0, void 0, function* () {
     var _a, _b, _c, _d;
     const timestamp = Date.now();
