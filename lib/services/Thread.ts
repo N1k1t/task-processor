@@ -63,23 +63,6 @@ export const registerThreadTaskContext = (type: ITaskHandlerDetails['type'], tas
 
 export const loadTasksContext = useInSlaveThread((execPath: string) => require(execPath));
 
-export const useThreads = useInMainThread((execPath: string) => {
-	if (typeof execPath !== 'string') {
-		throw new Error([
-			'Argument'.red, 
-			'execPath'.red.bold, 
-			'should be specified as'.red,
-			'module.filename'.red.bold,
-			'in'.red, 
-			'useThreads'.red.bold, 
-			'function'.red
-		].join(' '));
-	}
-
-	Object.assign(config, { useThreads: true, execPath });
-	spawnThreads();
-})
-
 export const getTaskContext = (type: ITaskHandlerDetails['type'], task: ITask): ITask => {
 	if (isMainThread) {
 		return task;
@@ -88,3 +71,49 @@ export const getTaskContext = (type: ITaskHandlerDetails['type'], task: ITask): 
 	const result = instance.tasks[type].find(({ name }) => name === task.name);
 	return result || task;
 }
+
+/**
+ * @description It creates threads for running tasks there
+ * @return void
+ *
+ * @param {Object} options 				- Threads options
+ * @param {number} options.execPath 	- Path of root module which register tasks.
+ * 		It's required because it's imposible to forward functions to threads with original lexical enviromnent,
+ * 		closure and etc. That helps to forward full tasks context to threads
+ *
+ * @example
+ * ```js
+ * import { registerCliTasks, useThreads } from '@n1k1t/task-processor';
+ *
+ * useThreads({ execPath: module.filepath });
+ *
+ * registerCliTasks([
+ *   {
+ *     name: 'some-heavy-task-1',
+ *     use: [...]
+ *   },
+ *   {
+ *     name: 'some-heavy-task-2',
+ *     use: [...]
+ *   },
+ *   {
+ *     name: 'some-heavy-task-3',
+ *     use: [...]
+ *   }
+ * ]);
+ * ```
+*/
+export const useThreads = useInMainThread(({ execPath }: { execPath: string }) => {
+	if (typeof execPath !== 'string') {
+		throw new Error([
+			'Options requires'.red,
+			'execPath'.red.bold,
+			'param in'.red,
+			'useThreads'.red.bold,
+			'function'.red
+		].join(' '));
+	}
+
+	Object.assign(config, { useThreads: true, execPath });
+	spawnThreads();
+})

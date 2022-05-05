@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTaskContext = exports.useThreads = exports.loadTasksContext = exports.registerThreadTaskContext = exports.queueThread = exports.useInSlaveThread = exports.useInMainThread = exports.isMainThread = void 0;
+exports.useThreads = exports.getTaskContext = exports.loadTasksContext = exports.registerThreadTaskContext = exports.queueThread = exports.useInSlaveThread = exports.useInMainThread = exports.isMainThread = void 0;
 const lodash_1 = __importDefault(require("lodash"));
 const worker_threads_1 = require("worker_threads");
 const threads_1 = require("threads");
@@ -49,21 +49,6 @@ const registerThreadTaskContext = (type, tasks) => {
 };
 exports.registerThreadTaskContext = registerThreadTaskContext;
 exports.loadTasksContext = (0, exports.useInSlaveThread)((execPath) => require(execPath));
-exports.useThreads = (0, exports.useInMainThread)((execPath) => {
-    if (typeof execPath !== 'string') {
-        throw new Error([
-            'Argument'.red,
-            'execPath'.red.bold,
-            'should be specified as'.red,
-            'module.filename'.red.bold,
-            'in'.red,
-            'useThreads'.red.bold,
-            'function'.red
-        ].join(' '));
-    }
-    Object.assign(config_1.default, { useThreads: true, execPath });
-    spawnThreads();
-});
 const getTaskContext = (type, task) => {
     if (worker_threads_1.isMainThread) {
         return task;
@@ -72,4 +57,17 @@ const getTaskContext = (type, task) => {
     return result || task;
 };
 exports.getTaskContext = getTaskContext;
+exports.useThreads = (0, exports.useInMainThread)(({ execPath }) => {
+    if (typeof execPath !== 'string') {
+        throw new Error([
+            'Options requires'.red,
+            'execPath'.red.bold,
+            'param in'.red,
+            'useThreads'.red.bold,
+            'function'.red
+        ].join(' '));
+    }
+    Object.assign(config_1.default, { useThreads: true, execPath });
+    spawnThreads();
+});
 //# sourceMappingURL=Thread.js.map

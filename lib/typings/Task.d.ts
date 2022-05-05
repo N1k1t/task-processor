@@ -11,7 +11,9 @@ export interface ITask {
 }
 
 export interface ICliTask extends ITask {
-	add?: { path: string | string[] }
+	add?: string | string[] | {
+		path: string | string[]
+	}
 }
 
 export interface IBackgroundTask extends ITask {

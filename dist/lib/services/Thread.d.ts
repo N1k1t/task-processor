@@ -7,5 +7,7 @@ export declare const useInSlaveThread: <T extends Function>(fn: T) => TFn<[], vo
 export declare const queueThread: <T>(fn: TThredWorkerFn) => Promise<T | null>;
 export declare const registerThreadTaskContext: (type: ITaskHandlerDetails['type'], tasks: (ICliTask | IBackgroundTask)[]) => void;
 export declare const loadTasksContext: TFn<[], void> | ((execPath: string) => any);
-export declare const useThreads: TFn<[], void> | ((execPath: string) => void);
 export declare const getTaskContext: (type: ITaskHandlerDetails['type'], task: ITask) => ITask;
+export declare const useThreads: TFn<[], void> | (({ execPath }: {
+    execPath: string;
+}) => void);

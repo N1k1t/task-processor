@@ -1,13 +1,14 @@
 {
     "name": "@n1k1t/task-processor",
     "version": "0.1.0",
-    "description": "",
+    "description": "Runner for background and cli tasks with SASS/CommonJS bundlers using native multithreading",
     "main": "dist/lib/index.js",
     "scripts": {
         "start": "node dist/lib/index",
         "dev": "nodemon dist/lib/index",
         "test": "nodemon test/index",
-        "ts-serve": "npx tsc -w"
+        "ts-serve": "npx tsc -w",
+        "build": "npx tsc --build"
     },
     "nodemonConfig": {
         "ignore": [
@@ -15,9 +16,6 @@
             "test/src/*",
             "test/dest/*"
         ]
-    },
-    "hooks": {
-        "per-commit": "npx tsc --build"
     },
     "author": "n1k1t",
     "license": "ISC",

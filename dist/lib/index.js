@@ -22,12 +22,11 @@ const findFiles = (0, util_1.promisify)(glob_1.default);
 const logger = (0, services_1.buildLogger)('System', 'yellow');
 (0, services_1.useInMainThread)(() => (0, services_1.printHello)())();
 const handleLineCommand = (tasks, command) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a;
     const task = tasks[command];
     if (task === undefined) {
         return logger.info('Task', `"${command}"`.red, 'was not found');
     }
-    const filesToAdd = lodash_1.default.flatten([(_a = task.add) === null || _a === void 0 ? void 0 : _a.path]).filter(path => path !== undefined);
+    const filesToAdd = lodash_1.default.flatten([lodash_1.default.get(task.add, 'path', task.add)]).filter(path => path !== undefined);
     const ignoreList = lodash_1.default.flatten([lodash_1.default.get(task.add, 'ignore', [])]);
     const results = yield Promise.all(filesToAdd.map(match => findFiles(match, {
         ignore: config_1.default.defaultIgnoredDirs.concat(ignoreList)
