@@ -10,7 +10,7 @@ or
 yarn add -D @n1k1t/task-processor
 ```
 
-## How to: `Do first steps`
+### How to: `Do first steps`
 1. Create `.js` executable file for tasks
 2. Register task
 ```js
@@ -43,7 +43,7 @@ node #your script
 ## `Processors`
 ...comming soon
 
-## How to: `Watch and bundle of SASS`
+### How to: `Watch and bundle of SASS`
 ```js
 const { registerBackgroundTasks } = require('@n1k1t/task-processor');
 
@@ -63,7 +63,7 @@ registerBackgroundTasks([
 ]);
 ```
 
-## How to: `Use Livereload for the dynamic injection of CSS`
+### How to: `Use Livereload for the dynamic injection of CSS`
 1. First, you need install a livereload plugin for your browser. Here is the [Plugin for Google Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=ru)
 2. Turn on the livereload plugin on the page which using bundled `sass` files
 3. Write some code
@@ -72,8 +72,8 @@ const { registerBackgroundTasks, useLivereload } = require('@n1k1t/task-processo
 
 /*
   The "useLivereload" creates a web socket server for integration with browser
-  If you already have another process with the same server then it creates the client
-  which will integrate with the first one
+  If you already have another process with the same server then 
+  it creates the client which will integrate with the first one
 */
 useLivereload();
 
@@ -90,7 +90,7 @@ registerBackgroundTasks([
 ]);
 ```
 
-## How to: `Bundle of several SASS files with multithreading`
+### How to: `Bundle of several SASS files with multithreading`
 ```js
 const { registerCliTasks, useThreads } = require('@n1k1t/task-processor');
 
@@ -99,9 +99,12 @@ const { registerCliTasks, useThreads } = require('@n1k1t/task-processor');
   
   The "useThreads" function creates workers each CPUs count in your system
 
-  The "execPath" argument should contain the path to module where tasks are registred. 
-  It's important because workers have different processes. 
-  And that's not possible to forward functions with some lexical environment or closure to another process
+  The "execPath" argument should contain the path to module where tasks 
+  are registred. 
+
+  It's important because workers have different processes. And that's 
+  not possible to forward functions with some lexical environment or 
+  closure to another process
 */
 useThreads({ execPath: module.filename });
 
@@ -118,7 +121,7 @@ registerCliTasks([
 ]);
 ```
 
-## How to: `Bundle Common JS`
+### How to: `Bundle Common JS`
 ```js
 const { registerBackgroundTasks } = require('@n1k1t/task-processor');
 
@@ -134,7 +137,7 @@ registerBackgroundTasks([
 ]);
 ```
 
-## How to: `Watch for several files change but bundle only one`
+### How to: `Watch for several files change but bundle only one`
 ```js
 const { registerBackgroundTasks, useLivereload } = require('@n1k1t/task-processor');
 
@@ -151,11 +154,14 @@ registerBackgroundTasks([
       { processor: 'get-files', path: 'path/to/main/file.js' },
       { processor: 'commonjs-bundle' },
       { processor: 'write-files', dir: 'path/to/dest', name: 'app' },
-      { processor: 'livereload', type: 'reload' } // Use type "reload" it for the page refreshing
+      { 
+        processor: 'livereload', 
+        type: 'reload' // Use type "reload" it for the page refreshing
+      }
     ]
   }
 ]);
 ```
 
-## TODO
+### TODO
 1. Add plugins support
