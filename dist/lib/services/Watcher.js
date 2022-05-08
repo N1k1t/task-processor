@@ -7,10 +7,10 @@ exports.setupTaskWatcher = void 0;
 const chokidar_1 = require("chokidar");
 const lodash_1 = __importDefault(require("lodash"));
 const path_1 = __importDefault(require("path"));
-const Console_1 = require("./Console");
+const Logger_1 = require("./Logger");
 const config_1 = __importDefault(require("../../config"));
 /*----------  Module deps  ----------*/
-const logger = (0, Console_1.buildLogger)('Watcher', 'magenta');
+const logger = (0, Logger_1.buildLogger)('Watcher', 'magenta');
 /*----------  Exports  ----------*/
 const setupTaskWatcher = (task, handler) => {
     const watchMatches = lodash_1.default.get(task.watch, 'match', task.watch);

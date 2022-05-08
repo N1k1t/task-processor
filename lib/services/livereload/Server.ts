@@ -5,7 +5,7 @@ import { parse as parseUrl } from 'url';
 import path from 'path';
 import _ from 'lodash';
 
-import { buildLogger } from '../Console';
+import { buildLogger } from '../Logger';
 import { livereloadService } from './Service';
 
 /*----------  Types  ----------*/

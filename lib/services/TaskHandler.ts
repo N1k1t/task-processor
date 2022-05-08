@@ -22,8 +22,8 @@ const handleLivereloadTask = ({ files, livereload: { action } }: TProcessorThrea
 	switch (action) {
 		case 'reload': return livereloadService.reloadPage();
 		case 'inject': return files
-			.filter(file => file.result.ext === '.css')
-			.forEach(file => livereloadService.applyCss(file.result.path));
+			.filter(file => file.ext === '.css')
+			.forEach(file => livereloadService.applyCss(file.path));
 	}
 }
 

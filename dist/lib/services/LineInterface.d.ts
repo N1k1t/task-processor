@@ -1,4 +1,4 @@
 import 'colors';
-import { TObject, ICliTask } from '../typings';
-export declare function setupLineInterface(tasks: TObject<ICliTask>[]): void;
-export declare function printHello(): void;
+import { ICliTask } from '../typings';
+export declare const useLineInterface: (tasks: ICliTask[], handler: (line: string) => void) => void;
+export declare const printHello: () => void;

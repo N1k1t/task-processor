@@ -1,6 +1,5 @@
-import { ParsedPath } from 'path';
-import { IProcessorRunnerContext, IFile } from './Processor';
-import { TValueOf } from './Etc';
+import { TValueOf } from './Common';
+import { TProcessorThreadContext } from './Processor';
 import { TProcessorOptions } from '../processors';
 import config from '../../config';
 
@@ -31,9 +30,6 @@ export interface ITaskHandlerDetails {
 		path: string | string[]
 	}
 }
-
-export type TProcessorThreadFile = Pick<IFile, keyof ParsedPath | 'path' | 'content' | 'result'>
-export type TProcessorThreadContext = Pick<IProcessorRunnerContext, 'livereload'> & { files: TProcessorThreadFile[] }
 
 export interface ITaskHandler {
 	runTask: (task: ITask, details: ITaskHandlerDetails) => Promise<TProcessorThreadContext | null>

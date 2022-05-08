@@ -10,13 +10,14 @@ export interface IWriteFilesOptions {
 
 const handler: TProcessorGenerator<IWriteFilesOptions> = ({ logger }) => async ({ files }, { dir, name, ext }) => {
 	for (const file of files) {
-		file.include({ dir, name, ext });
-		
-		await fs.writeFile(file.result.path, file.result.content).catch(error => {
-			throw new ProcessorError(`Write file "${file.name.red}" to "${file.result.path.yellow}"`, error.message);
+		file.insert({ dir, name, ext });
+
+
+		await fs.writeFile(file.path, file.content).catch(error => {
+			throw new ProcessorError(`Write file "${file.name.red}" to "${file.path.yellow}"`, error.message);
 		});
 
-		logger.info('File'.gray, `"${file.name}"`, 'writed to'.gray, `"${file.result.path.yellow}"`);
+		logger.info('File'.gray, `"${file.name}"`, 'writed to'.gray, `"${file.path.yellow}"`);
 	}
 }
 

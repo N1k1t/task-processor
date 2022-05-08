@@ -9,18 +9,7 @@ import { version } from '../../package.json';
 
 /*----------  Types  ----------*/
 
-import { ICliTask, TColoredMessage } from '../typings';
-
-type TLoggerFn = (...messages: TColoredMessage[]) => void
-
-interface ILoggerBase {
-	info: TLoggerFn
-	error: TLoggerFn
-	emptyLine: () => ILoggerBase
-}
-interface ILoggerHelpers {
-	useScope: (scope: string) => ILoggerBase
-}
+import { ICliTask } from '../typings';
 
 /*----------  Module deps  ----------*/
 
@@ -55,8 +44,6 @@ const printTasksMessage = (tasks: ICliTask[]): void => {
 
 /*----------  Exports  ----------*/
 
-export type TLogger<T = {}> = T & ILoggerBase
-
 export const useLineInterface = (tasks: ICliTask[], handler: (line: string) => void): void => {
 	printTasksMessage(tasks);
 
@@ -73,37 +60,3 @@ export const printHello = (): void => console.log([
 	gradient.pastel.multiline(appLabel), 
 	`Version "${version}"`.gray
 ].join('\n'))
-
-export const buildLogger = (title: string, color: string, hasTime: boolean = true): TLogger<ILoggerHelpers> => {
-	const infoLog = (scope: string | null = null) => (...messages: TColoredMessage[]) => console.log(...[
-			hasTime ? new Date().toLocaleTimeString().gray : null,
-			String(` [${title}]`.padEnd(15, ' '))[<keyof String>color],
-			scope && String(`<${scope}>`)[<keyof String>color],
-			messages.join(' ')].filter(segment => segment !== null));
-
-	const errorLog = (scope: string | null = null) => (...messages: TColoredMessage[]) => console.error(...[
-			hasTime ? new Date().toLocaleTimeString().gray : null,
-			String(` [${title}]`.padEnd(15, ' '))[<keyof String>color],
-			scope && `<${scope}>`.white.bgRed.bold,
-			'Error:'.red,
-			messages.join(' ')].filter(segment => segment !== null));
-
-	const emptyLineLog = () => {
-		console.log('');
-		return logger;
-	};
-
-	const logger = {
-		info: infoLog(null),
-		error: errorLog(null),
-		emptyLine: emptyLineLog,
-
-		useScope: (scope: string) => ({
-			info: infoLog(scope),
-			error: errorLog(scope),
-			emptyLine: emptyLineLog
-		})
-	};
-
-	return logger;
-}

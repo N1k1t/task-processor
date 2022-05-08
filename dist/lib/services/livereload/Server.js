@@ -9,11 +9,11 @@ const fs_1 = require("fs");
 const url_1 = require("url");
 const path_1 = __importDefault(require("path"));
 const lodash_1 = __importDefault(require("lodash"));
-const Console_1 = require("../Console");
+const Logger_1 = require("../Logger");
 const Service_1 = require("./Service");
 /*----------  Module deps  ----------*/
 const livereloadJsFile = (0, fs_1.readFileSync)(path_1.default.resolve(__dirname, '../../../../assets/livereload.min.js'));
-const logger = (0, Console_1.buildLogger)('Livereload', 'gray');
+const logger = (0, Logger_1.buildLogger)('Livereload', 'gray');
 const { wsServer } = Service_1.livereloadService;
 const httpHandler = ({ url, method }, res) => {
     const { pathname } = (0, url_1.parse)(url || '');

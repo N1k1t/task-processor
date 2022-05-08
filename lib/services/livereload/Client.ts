@@ -3,7 +3,7 @@ import { check as checkPort } from 'tcp-port-used';
 import _ from 'lodash';
 
 import config from '../../../config';
-import { buildLogger } from '../Console';
+import { buildLogger } from '../Logger';
 import { livereloadService } from './Service';
 import { handleServerConnect } from './Server';
 

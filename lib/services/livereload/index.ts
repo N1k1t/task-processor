@@ -1,7 +1,7 @@
 import { check as checkPort } from 'tcp-port-used';
 import _ from 'lodash';
 
-import { buildLogger } from '../Console';
+import { buildLogger } from '../Logger';
 import { useInMainThread } from '../Thread';
 import { handleServerConnect } from './Server';
 import { handleClientConnect } from './Client';

@@ -2,7 +2,7 @@ import { watch } from 'chokidar';
 import _ from 'lodash';
 import path from 'path';
 
-import { buildLogger } from './Console';
+import { buildLogger } from './Logger';
 import config from '../../config';
 
 /*----------  Types  ----------*/

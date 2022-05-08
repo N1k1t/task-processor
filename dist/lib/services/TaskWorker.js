@@ -23,12 +23,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.runTask = void 0;
 const worker_threads_1 = require("worker_threads");
 const worker_1 = require("threads/worker");
-const Console_1 = require("./Console");
+const Logger_1 = require("./Logger");
 const processors_1 = require("../processors");
 const Context_1 = require("./Context");
 const Thread_1 = require("./Thread");
 /*----------  Module deps  ----------*/
-const logger = (0, Console_1.buildLogger)(Thread_1.isMainThread ? 'Worker' : `Worker #${worker_threads_1.threadId}`, 'cyan');
+const logger = (0, Logger_1.buildLogger)(Thread_1.isMainThread ? 'Worker' : `Worker #${worker_threads_1.threadId}`, 'cyan');
 const breakSymbol = Symbol('Break');
 const addFilesToContext = (task, details, runnerContext) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
@@ -68,7 +68,7 @@ const runTask = (inputedTask, details) => __awaiter(void 0, void 0, void 0, func
             return null;
         }
     }
-    return (0, Context_1.toThreadContext)(runnerContext);
+    return runnerContext.convertToThread();
 });
 exports.runTask = runTask;
 /*----------  Thread deps  ----------*/

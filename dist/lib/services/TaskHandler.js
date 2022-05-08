@@ -23,8 +23,8 @@ const handleLivereloadTask = ({ files, livereload: { action } }) => {
     switch (action) {
         case 'reload': return services_1.livereloadService.reloadPage();
         case 'inject': return files
-            .filter(file => file.result.ext === '.css')
-            .forEach(file => services_1.livereloadService.applyCss(file.result.path));
+            .filter(file => file.ext === '.css')
+            .forEach(file => services_1.livereloadService.applyCss(file.path));
     }
 };
 const prepareTaskToThread = (task) => JSON.parse(JSON.stringify(task));

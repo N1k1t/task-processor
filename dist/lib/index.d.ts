@@ -1,6 +1,6 @@
 import { IBackgroundTask, ICliTask } from './typings';
 export { useLivereloadServer, useThreads } from './services';
-export { ICliTask, IBackgroundTask, IFile, IProcessorRunnerContext } from './typings';
+export { IFile, ICliTask, IBackgroundTask, IProcessorRunnerContext, } from './typings';
 /**
  * @description Register tasks for exec it from command line
  * @return void

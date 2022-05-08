@@ -2,19 +2,19 @@ import _ from 'lodash';
 import { threadId } from 'worker_threads';
 import { expose } from 'threads/worker'
 
-import { buildLogger } from './Console';
+import { buildLogger } from './Logger';
 import { processors } from '../processors';
-import { buildContext, toThreadContext } from './Context';
+import { buildContext } from './Context';
 import { loadTasksContext, getTaskContext, isMainThread } from './Thread';
 
 /*----------  Types  ----------*/
 
 import { 
-	ITask,
-	ITaskHandlerDetails, 
 	IProcessorRunnerContext,
+	ITaskHandlerDetails,
 	TProcessorName,
-	ITaskHandler
+	ITaskHandler,
+	ITask
 } from '../typings';
 
 /*----------  Module deps  ----------*/
@@ -69,7 +69,7 @@ export const runTask: ITaskHandler['runTask'] = async (inputedTask, details) => 
 		}
 	}
 
-	return toThreadContext(runnerContext);
+	return runnerContext.convertToThread();
 }
 
 /*----------  Thread deps  ----------*/

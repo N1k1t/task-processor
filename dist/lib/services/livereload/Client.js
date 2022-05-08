@@ -15,11 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleClientConnect = exports.connectClient = exports.callClientCommand = void 0;
 const tcp_port_used_1 = require("tcp-port-used");
 const config_1 = __importDefault(require("../../../config"));
-const Console_1 = require("../Console");
+const Logger_1 = require("../Logger");
 const Service_1 = require("./Service");
 const Server_1 = require("./Server");
 /*----------  Module deps  ----------*/
-const logger = (0, Console_1.buildLogger)('Livereload', 'gray');
+const logger = (0, Logger_1.buildLogger)('Livereload', 'gray');
 const { wsClient, wsServer } = Service_1.livereloadService;
 const handleClientDisconnect = () => __awaiter(void 0, void 0, void 0, function* () {
     const { port } = Service_1.livereloadService;

@@ -13,11 +13,11 @@ const fs_1 = require("fs");
 const errors_1 = require("../errors");
 const handler = ({ logger }) => ({ files }, { dir, name, ext }) => __awaiter(void 0, void 0, void 0, function* () {
     for (const file of files) {
-        file.include({ dir, name, ext });
-        yield fs_1.promises.writeFile(file.result.path, file.result.content).catch(error => {
-            throw new errors_1.ProcessorError(`Write file "${file.name.red}" to "${file.result.path.yellow}"`, error.message);
+        file.insert({ dir, name, ext });
+        yield fs_1.promises.writeFile(file.path, file.content).catch(error => {
+            throw new errors_1.ProcessorError(`Write file "${file.name.red}" to "${file.path.yellow}"`, error.message);
         });
-        logger.info('File'.gray, `"${file.name}"`, 'writed to'.gray, `"${file.result.path.yellow}"`);
+        logger.info('File'.gray, `"${file.name}"`, 'writed to'.gray, `"${file.path.yellow}"`);
     }
 });
 exports.default = handler;

@@ -1,5 +1,5 @@
 import { server as WebSocketServer, client as WebSocketClient } from 'websocket';
-import { buildLogger } from '../Console';
+import { buildLogger } from '../Logger';
 
 /*----------  Types  ----------*/
 

@@ -11,12 +11,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useLivereloadServer = exports.livereloadService = void 0;
 const tcp_port_used_1 = require("tcp-port-used");
-const Console_1 = require("../Console");
+const Logger_1 = require("../Logger");
 const Thread_1 = require("../Thread");
 const Server_1 = require("./Server");
 const Client_1 = require("./Client");
 /*----------  Module deps  ----------*/
-const logger = (0, Console_1.buildLogger)('Livereload', 'gray');
+const logger = (0, Logger_1.buildLogger)('Livereload', 'gray');
 /*----------  Exports  ----------*/
 var Service_1 = require("./Service");
 Object.defineProperty(exports, "livereloadService", { enumerable: true, get: function () { return Service_1.livereloadService; } });

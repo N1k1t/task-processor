@@ -1,3 +1,2 @@
-import { IProcessorRunnerContext, TProcessorThreadContext } from '../typings';
-export declare const buildContext: () => IProcessorRunnerContext;
-export declare function toThreadContext(context: IProcessorRunnerContext): TProcessorThreadContext;
+import { ProcessorRunnerContext } from '../models';
+export declare const buildContext: () => ProcessorRunnerContext;

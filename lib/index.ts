@@ -43,11 +43,12 @@ const handleLineCommand = async (tasks: TObject<ICliTask>, command: string): Pro
 /*----------  Exports  ----------*/
 
 export { useLivereloadServer, useThreads } from './services';
+
 export {
+	IFile,
 	ICliTask,
 	IBackgroundTask,
-	IFile,
-	IProcessorRunnerContext
+	IProcessorRunnerContext,
 } from './typings';
 
 /**
