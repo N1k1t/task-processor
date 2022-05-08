@@ -22,17 +22,24 @@ const services_1 = require("./services");
 const findFiles = (0, util_1.promisify)(glob_1.default);
 const logger = (0, services_1.buildLogger)('System', 'yellow');
 (0, services_1.useInMainThread)(() => (0, services_1.printHello)())();
+const getTaskFilePaths = (task) => __awaiter(void 0, void 0, void 0, function* () {
+    if (task.add === undefined) {
+        return null;
+    }
+    const filesToAdd = lodash_1.default.flatten([lodash_1.default.get(task.add, 'path', task.add)]);
+    const ignoreList = lodash_1.default.flatten([lodash_1.default.get(task.add, 'ignore', [])]);
+    const results = yield Promise.all(filesToAdd.map(match => findFiles(match, {
+        ignore: config_1.default.defaultIgnoredDirs.concat(ignoreList)
+    })));
+    return lodash_1.default.uniq(lodash_1.default.flatten(results));
+});
 const handleLineCommand = (tasks, command) => __awaiter(void 0, void 0, void 0, function* () {
     const task = tasks[command];
     if (task === undefined) {
         return logger.info('Task', `"${command}"`.red, 'was not found');
     }
-    const filesToAdd = lodash_1.default.flatten([lodash_1.default.get(task.add, 'path', task.add)]).filter(path => path !== undefined);
-    const ignoreList = lodash_1.default.flatten([lodash_1.default.get(task.add, 'ignore', [])]);
-    const results = yield Promise.all(filesToAdd.map(match => findFiles(match, {
-        ignore: config_1.default.defaultIgnoredDirs.concat(ignoreList)
-    })));
-    (0, services_1.handleTask)(task, { config: config_1.default, type: 'cli', addFiles: { path: lodash_1.default.uniq(lodash_1.default.flatten(results)) } });
+    const paths = yield getTaskFilePaths(task);
+    (0, services_1.handleTask)(task, Object.assign({ config: config_1.default, type: 'cli' }, (paths && { addFiles: { path: paths } })));
 });
 /*----------  Exports  ----------*/
 var services_2 = require("./services");

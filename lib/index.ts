@@ -25,19 +25,33 @@ const logger = buildLogger('System', 'yellow');
 
 useInMainThread(() => printHello())();
 
+const getTaskFilePaths = async (task: ICliTask): Promise<null | string[]> => {
+	if (task.add === undefined) {
+		return null;
+	}
+
+	const filesToAdd = _.flatten([_.get(task.add, 'path', task.add)]);
+	const ignoreList = _.flatten([_.get(task.add, 'ignore', [])]);
+	const results = await Promise.all(filesToAdd.map(match => findFiles(<string>match, {
+		ignore: config.defaultIgnoredDirs.concat(ignoreList)
+	})));
+
+	return _.uniq(_.flatten(results));
+}
+
 const handleLineCommand = async (tasks: TObject<ICliTask>, command: string): Promise<void> => {
 	const task = tasks[command]
 	if (task === undefined) {
 		return logger.info('Task', `"${command}"`.red, 'was not found');
 	}
 
-	const filesToAdd = _.flatten([_.get(task.add, 'path', task.add)]).filter(path => path !== undefined);
-	const ignoreList = _.flatten([_.get(task.add, 'ignore', [])]);
-	const results = await Promise.all(filesToAdd.map(match => findFiles(<string>match, { 
-		ignore: config.defaultIgnoredDirs.concat(ignoreList)
-	})));
+	const paths = await getTaskFilePaths(task);
 
-	handleTask(task, { config, type: 'cli', addFiles: { path: _.uniq(_.flatten(results)) } });
+	handleTask(task, {
+		config,
+		type: 'cli',
+		...(paths && { addFiles: { path: paths } })
+	});
 }
 
 /*----------  Exports  ----------*/
