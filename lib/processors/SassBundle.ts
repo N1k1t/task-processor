@@ -9,7 +9,7 @@ export interface ISassBundleOptions extends Omit<StringOptions<'async'>, 'data' 
 }
 
 const handler: TProcessorGenerator<ISassBundleOptions> = ({ }) => async ({ files }, options = {}) => {
-	await Promise.all(files.map(async (file) => {
+	await Promise.all([...files].map(async (file) => {
 		const resultOptions = { 
 			...options,
 			loadPaths: _.uniq([file.dir].concat(options.paths || [])),

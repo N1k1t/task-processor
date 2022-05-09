@@ -27,7 +27,7 @@ function handleSyntaxErrors(file, content) {
     });
 }
 const handler = ({}) => ({ files }, options) => __awaiter(void 0, void 0, void 0, function* () {
-    yield Promise.all(files.map((file) => __awaiter(void 0, void 0, void 0, function* () {
+    yield Promise.all([...files].map((file) => __awaiter(void 0, void 0, void 0, function* () {
         const fileStream = new stream_1.Readable();
         fileStream.push(file.content);
         fileStream.push(null);

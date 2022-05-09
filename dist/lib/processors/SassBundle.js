@@ -16,7 +16,7 @@ const lodash_1 = __importDefault(require("lodash"));
 const sass_1 = require("sass");
 const errors_1 = require("../errors");
 const handler = ({}) => ({ files }, options = {}) => __awaiter(void 0, void 0, void 0, function* () {
-    yield Promise.all(files.map((file) => __awaiter(void 0, void 0, void 0, function* () {
+    yield Promise.all([...files].map((file) => __awaiter(void 0, void 0, void 0, function* () {
         const resultOptions = Object.assign(Object.assign({}, options), { loadPaths: lodash_1.default.uniq([file.dir].concat(options.paths || [])) });
         const result = yield (0, sass_1.compileStringAsync)(file.content.toString(), resultOptions).catch(error => {
             throw new errors_1.ProcessorError(`Bundling file "${file.path.red}"`, error.message);

@@ -8,7 +8,7 @@ const File_1 = __importDefault(require("./File"));
 /*----------  Exports  ----------*/
 class ProcessorRunnerContext {
     constructor() {
-        this.files = [];
+        this.files = new Set();
         this.livereload = {
             enabled: false,
             action: null
@@ -21,7 +21,7 @@ class ProcessorRunnerContext {
         return new File_1.default(filePath, content);
     }
     convertToThread() {
-        return Object.assign(Object.assign({}, lodash_1.default.pick(this, ['livereload'])), { files: this.files.map(file => (Object.assign(Object.assign({}, file.dist), { path: file.path }))) });
+        return Object.assign(Object.assign({}, lodash_1.default.pick(this, ['livereload'])), { files: [...this.files].map(file => (Object.assign(Object.assign({}, file.dist), { path: file.path }))) });
     }
 }
 exports.default = ProcessorRunnerContext;

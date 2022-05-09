@@ -19,10 +19,10 @@ const handler: TProcessorGenerator<IGetFilesOptions> = ({ logger }) => async ({ 
 			throw new ProcessorError(`File "${filePath.red}" can't be readed`, error.message);
 		});
 
-		files.push(buildFile(filePath, file));
+		files.add(buildFile(filePath, file));
 	}
 
-	logger.info('Got'.gray, String(files.length).yellow, 'file(s)'.gray);
+	logger.info('Got'.gray, String(files.size).yellow, 'file(s)'.gray);
 }
 
 export default handler

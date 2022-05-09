@@ -20,7 +20,7 @@ async function handleSyntaxErrors(file: IFile, content: IFile['content']) {
 }
 
 const handler: TProcessorGenerator<ICommonjsBundleOptions> = ({ }) => async ({ files }, options) => {
-	await Promise.all(files.map(async (file) => {
+	await Promise.all([...files].map(async (file) => {
 		const fileStream = new Readable();
 
 		fileStream.push(file.content);

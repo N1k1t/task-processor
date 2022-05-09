@@ -43,7 +43,7 @@ const addFilesToContext = (task, details, runnerContext) => __awaiter(void 0, vo
 const runTask = (inputedTask, details) => __awaiter(void 0, void 0, void 0, function* () {
     (0, Thread_1.loadTasksContext)(details.config.execPath);
     const task = (0, Thread_1.getTaskContext)(details.type, inputedTask);
-    const runnerContext = (0, Context_1.buildContext)();
+    const runnerContext = (0, Context_1.buildProcessorRunnerContext)();
     const addFilesResult = yield addFilesToContext(task, details, runnerContext).catch(error => {
         logger.error(error.message);
         return breakSymbol;

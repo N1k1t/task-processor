@@ -24,9 +24,9 @@ const handler = ({ logger }) => ({ buildFile, files }, { path }) => __awaiter(vo
         const file = yield fs_1.promises.readFile(filePath).catch(error => {
             throw new errors_1.ProcessorError(`File "${filePath.red}" can't be readed`, error.message);
         });
-        files.push(buildFile(filePath, file));
+        files.add(buildFile(filePath, file));
     }
-    logger.info('Got'.gray, String(files.length).yellow, 'file(s)'.gray);
+    logger.info('Got'.gray, String(files.size).yellow, 'file(s)'.gray);
 });
 exports.default = handler;
 //# sourceMappingURL=GetFiles.js.map

@@ -3,7 +3,7 @@ import { ProcessorRunnerContext } from '../models';
 
 /*----------  Exports  ----------*/
 
-export const buildContext = (): ProcessorRunnerContext => {
+export const buildProcessorRunnerContext = (): ProcessorRunnerContext => {
 	const context = new ProcessorRunnerContext();
 
 	return Object.assign(context, {

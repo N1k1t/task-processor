@@ -16,7 +16,7 @@ interface ILivereloadConfig {
 /*----------  Exports  ----------*/
 
 export default class ProcessorRunnerContext {
-	public readonly files: File[] = []
+	public readonly files: Set<File> = new Set()
 	public readonly livereload: ILivereloadConfig = {
 		enabled: false,
 		action: null
@@ -33,7 +33,7 @@ export default class ProcessorRunnerContext {
 	public convertToThread(): TProcessorThreadContext {
 		return {
 			..._.pick(this, ['livereload']),
-			files: this.files.map(file => ({ ...file.dist, path: file.path }))
+			files: [...this.files].map(file => ({ ...file.dist, path: file.path }))
 		};
 	}
 }

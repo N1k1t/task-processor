@@ -1,2 +1,2 @@
 import { ProcessorRunnerContext } from '../models';
-export declare const buildContext: () => ProcessorRunnerContext;
+export declare const buildProcessorRunnerContext: () => ProcessorRunnerContext;

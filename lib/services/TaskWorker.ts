@@ -4,7 +4,7 @@ import { expose } from 'threads/worker'
 
 import { buildLogger } from './Logger';
 import { processors } from '../processors';
-import { buildContext } from './Context';
+import { buildProcessorRunnerContext } from './Context';
 import { loadTasksContext, getTaskContext, isMainThread } from './Thread';
 
 /*----------  Types  ----------*/
@@ -39,7 +39,7 @@ export const runTask: ITaskHandler['runTask'] = async (inputedTask, details) => 
 	loadTasksContext(details.config.execPath);
 
 	const task = getTaskContext(details.type, inputedTask);
-	const runnerContext = buildContext();
+	const runnerContext = buildProcessorRunnerContext();
 	
 	const addFilesResult = await addFilesToContext(task, details, runnerContext).catch(error => {
 		logger.error(error.message);

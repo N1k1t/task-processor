@@ -5,7 +5,7 @@ interface ILivereloadConfig {
     action: TLivereloadAction | null;
 }
 export default class ProcessorRunnerContext {
-    readonly files: File[];
+    readonly files: Set<File>;
     readonly livereload: ILivereloadConfig;
     useLivereload(action: TLivereloadAction): void;
     buildFile(filePath: File['path'], content: File['content']): File;
