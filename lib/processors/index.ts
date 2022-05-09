@@ -4,6 +4,7 @@ import writeFilesProcessor, { IWriteFilesOptions } from './WriteFiles';
 import middlewareProcessor, { IMiddlewareOptions } from './Middleware';
 import sassBundleProcessor, { ISassBundleOptions } from './SassBundle';
 import livereloadProcessor, { ILivereloadOptions } from './Livereload';
+import sharpProcessor, { ISharpOptions } from './Sharp';
 
 import { TProcessorGenerator } from '../typings';
 
@@ -16,6 +17,7 @@ export type TProcessorOptions = {
 	'middleware': IMiddlewareOptions & TProcessorName<'middleware'>
 	'sass-bundle': ISassBundleOptions & TProcessorName<'sass-bundle'>
 	'livereload': ILivereloadOptions & TProcessorName<'livereload'>
+	'sharp': ISharpOptions & TProcessorName<'sharp'>
 }
 
 export const processors: { [key in keyof TProcessorOptions]: TProcessorGenerator<TProcessorOptions[key]> } = {
@@ -24,5 +26,6 @@ export const processors: { [key in keyof TProcessorOptions]: TProcessorGenerator
 	'write-files': writeFilesProcessor,
 	'middleware': middlewareProcessor,
 	'sass-bundle': sassBundleProcessor,
-	'livereload': livereloadProcessor
+	'livereload': livereloadProcessor,
+	'sharp': sharpProcessor
 }

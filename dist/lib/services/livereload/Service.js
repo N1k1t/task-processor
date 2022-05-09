@@ -14,6 +14,7 @@ exports.livereloadService = {
     wsClient: new websocket_1.client(),
     callCommand: () => logServerWasNotStarted(),
     reloadPage: () => logServerWasNotStarted(),
-    applyCss: () => logServerWasNotStarted()
+    injectCss: () => logServerWasNotStarted(),
+    injectImg: () => logServerWasNotStarted()
 };
 //# sourceMappingURL=Service.js.map

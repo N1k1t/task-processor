@@ -63,7 +63,7 @@ registerBackgroundTasks([
 ]);
 ```
 
-### How to: `Use Livereload for the dynamic injection of CSS`
+### How to: `Use Livereload for the dynamic injection of CSS/Image`
 1. First, you need to install a livereload plugin for your browser. Here is the [Plugin for Google Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=ru)
 2. Turn on the livereload plugin on the page which using bundled `sass` files
 3. Write some code
@@ -85,6 +85,52 @@ registerBackgroundTasks([
       { processor: 'sass-bundle' },
       { processor: 'write-files', dir: 'path/to/dest' },
       { processor: 'livereload', type: 'inject' }
+    ]
+  }
+]);
+```
+
+### How to: `Create/resize/convert images`
+[There you can find the Sharp opportunities](https://www.npmjs.com/package/sharp)
+```js
+const { registerCliTasks, useLivereload } = require('@n1k1t/task-processor');
+
+useLivereload();
+
+registerCliTasks([
+  {
+    name: 'create-picture',
+    use: [
+      use: [
+        {
+          processor: 'sharp',
+          create: {
+            width: 48,
+            height: 48,
+            channels: 4,
+            background: { r: 255, g: 0, b: 0, alpha: 0.5 }
+          },
+          pipeline: sharp => sharp.png()
+        },
+        { processor: 'write-files', dir: 'test/dest', name: 'result' },
+        { processor: 'livereload', type: 'inject' }
+      ]
+    ]
+  }
+]);
+```
+
+### How to: `Bundle Common JS`
+```js
+const { registerBackgroundTasks } = require('@n1k1t/task-processor');
+
+registerBackgroundTasks([
+  {
+    name: 'js',
+    watch: 'path/to/src/app.js',
+    use: [
+      { processor: 'commonjs-bundle' },
+      { processor: 'write-files', dir: 'path/to/dest' }
     ]
   }
 ]);
@@ -121,22 +167,6 @@ registerCliTasks([
 ]);
 ```
 
-### How to: `Bundle Common JS`
-```js
-const { registerBackgroundTasks } = require('@n1k1t/task-processor');
-
-registerBackgroundTasks([
-  {
-    name: 'js',
-    watch: 'path/to/src/app.js',
-    use: [
-      { processor: 'commonjs-bundle' },
-      { processor: 'write-files', dir: 'path/to/dest' }
-    ]
-  }
-]);
-```
-
 ### How to: `Watch for several files change but bundle only one`
 ```js
 const { registerBackgroundTasks, useLivereload } = require('@n1k1t/task-processor');
@@ -156,7 +186,7 @@ registerBackgroundTasks([
       { processor: 'write-files', dir: 'path/to/dest', name: 'app' },
       { 
         processor: 'livereload', 
-        type: 'reload' // Use type "reload" it for the page refreshing
+        type: 'reload' // Use type with "reload" for the page refreshing
       }
     ]
   }

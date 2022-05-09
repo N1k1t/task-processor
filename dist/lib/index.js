@@ -68,8 +68,7 @@ Object.defineProperty(exports, "useThreads", { enumerable: true, get: function (
  *     add: { path: 'test/src/main.scss' },
  *     use: [
  *       { processor: 'sass-bundle' },
- *       { processor: 'write-files', dir: 'test/dest', name: 'result' },
- *       { processor: 'livereload', type: 'inject' }
+ *       { processor: 'write-files', dir: 'test/dest', name: 'result' }
  *     ]
  *   }
  * ]);
@@ -109,8 +108,7 @@ exports.registerCliTasks = registerCliTasks;
  *     watch: { match: 'test/src/*.scss', ignore: ['_*.scss', '*.*.scss'] },
  *     use: [
  *       { processor: 'sass-bundle' },
- *       { processor: 'write-files', dir: 'test/dest' },
- *       { processor: 'livereload', type: 'inject' }
+ *       { processor: 'write-files', dir: 'test/dest' }
  *     ]
  *   }
  * ]);

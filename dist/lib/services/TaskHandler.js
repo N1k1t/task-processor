@@ -19,12 +19,20 @@ const TaskWorker_1 = require("./TaskWorker");
 const config_1 = __importDefault(require("../../config"));
 /*----------  Module deps  ----------*/
 const logger = (0, services_1.buildLogger)(`Master`, 'green');
+const checkFileIsCss = (file) => file.ext === '.css';
+const checkFileIsImg = (file) => config_1.default.sharpImageFormats.includes(file.ext);
+const handleLivereloadInject = (files) => files.forEach(file => {
+    if (checkFileIsCss(file)) {
+        return services_1.livereloadService.injectCss(file.path);
+    }
+    if (checkFileIsImg(file)) {
+        return services_1.livereloadService.injectImg(file.path);
+    }
+});
 const handleLivereloadTask = ({ files, livereload: { action } }) => {
     switch (action) {
         case 'reload': return services_1.livereloadService.reloadPage();
-        case 'inject': return files
-            .filter(file => file.ext === '.css')
-            .forEach(file => services_1.livereloadService.applyCss(file.path));
+        case 'inject': return handleLivereloadInject(files);
     }
 };
 const prepareTaskToThread = (task) => JSON.parse(JSON.stringify(task));

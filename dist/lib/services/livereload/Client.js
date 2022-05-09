@@ -59,7 +59,8 @@ const handleClientConnect = (port) => __awaiter(void 0, void 0, void 0, function
             using: 'client',
             callCommand: (0, exports.callClientCommand)(connection),
             reloadPage: () => (0, exports.callClientCommand)(connection)('reload', { path: '/' }),
-            applyCss: filePath => (0, exports.callClientCommand)(connection)('reload', { path: filePath, liveCSS: true })
+            injectCss: filePath => (0, exports.callClientCommand)(connection)('reload', { path: filePath, liveCSS: true }),
+            injectImg: filePath => (0, exports.callClientCommand)(connection)('reload', { path: filePath, liveImg: true })
         });
     });
     wsClient.on('connectFailed', error => logger.error('Client connect has been failed', error.message));

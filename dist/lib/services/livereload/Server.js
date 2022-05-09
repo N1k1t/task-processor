@@ -71,7 +71,8 @@ const handleServerConnect = (port) => {
         using: 'server',
         callCommand: callServerCommand,
         reloadPage: () => callServerCommand('reload', { path: '/' }),
-        applyCss: filePath => callServerCommand('reload', { path: filePath, liveCSS: true })
+        injectCss: filePath => callServerCommand('reload', { path: filePath, liveCSS: true }),
+        injectImg: filePath => callServerCommand('reload', { path: filePath, liveImg: true })
     });
     httpServer.listen(port, () => logger.info('Server has been started on'.green, String(port).green.bold));
     wsServer.on('request', request => {

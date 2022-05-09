@@ -13,7 +13,7 @@ class File {
         Object.assign(this.source, { content });
     }
     get path() {
-        return this.dist.path || path_1.default.join(this.dir, this.name, this.ext);
+        return this.dist.path || path_1.default.join(this.dir, `${this.name}${this.ext}`);
     }
     get name() {
         return this.dist.name || this.source.name;
@@ -32,7 +32,7 @@ class File {
         return this;
     }
     setExt(value) {
-        this.dist.ext = value;
+        this.dist.ext = value[0] === '.' ? value : `.${value}`;
         return this;
     }
     setPath(value) {
@@ -43,12 +43,14 @@ class File {
         this.dist.name = value;
         return this;
     }
+    setDir(value) {
+        this.dist.dir = value;
+        return this;
+    }
     insert({ dir, name, ext }) {
-        Object.assign(this.dist, {
-            dir: dir !== null && dir !== void 0 ? dir : this.dist.dir,
-            name: name !== null && name !== void 0 ? name : this.dist.name,
-            ext: ext !== null && ext !== void 0 ? ext : this.dist.ext
-        });
+        name && this.setName(name);
+        dir && this.setDir(dir);
+        ext && this.setExt(ext);
         return this;
     }
 }

@@ -7,6 +7,7 @@ export type TLivereloadCommand = {
 	command: TLivereloadCommandName
 	path?: string
 	liveCSS?: boolean
+	liveImg?: boolean
 }
 
 export interface ILivereloadService {
@@ -18,5 +19,6 @@ export interface ILivereloadService {
 
 	readonly callCommand: (command: TLivereloadCommandName, payload: Omit<TLivereloadCommand, 'command'>) => void
 	readonly reloadPage: () => void
-	readonly applyCss: (filePath: string) => void
+	readonly injectCss: (filePath: string) => void
+	readonly injectImg: (filePath: string) => void
 }

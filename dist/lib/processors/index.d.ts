@@ -4,6 +4,7 @@ import { IWriteFilesOptions } from './WriteFiles';
 import { IMiddlewareOptions } from './Middleware';
 import { ISassBundleOptions } from './SassBundle';
 import { ILivereloadOptions } from './Livereload';
+import { ISharpOptions } from './Sharp';
 import { TProcessorGenerator } from '../typings';
 declare type TProcessorName<T extends string> = {
     processor?: T;
@@ -15,6 +16,7 @@ export declare type TProcessorOptions = {
     'middleware': IMiddlewareOptions & TProcessorName<'middleware'>;
     'sass-bundle': ISassBundleOptions & TProcessorName<'sass-bundle'>;
     'livereload': ILivereloadOptions & TProcessorName<'livereload'>;
+    'sharp': ISharpOptions & TProcessorName<'sharp'>;
 };
 export declare const processors: {
     [key in keyof TProcessorOptions]: TProcessorGenerator<TProcessorOptions[key]>;

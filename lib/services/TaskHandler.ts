@@ -9,7 +9,8 @@ import {
 	ITask, 
 	ITaskHandlerDetails, 
 	TProcessorThreadContext, 
-	TObject 
+	TObject,
+	TProcessorThreadFile
 } from '../typings';
 
 type TTaskHandlerResult = Promise<(TProcessorThreadContext | null)[] | null>
@@ -18,12 +19,22 @@ type TTaskHandlerResult = Promise<(TProcessorThreadContext | null)[] | null>
 
 const logger = buildLogger(`Master`, 'green');
 
+const checkFileIsCss = (file: TProcessorThreadFile) => file.ext === '.css';
+const checkFileIsImg = (file: TProcessorThreadFile) => config.sharpImageFormats.includes(file.ext);
+
+const handleLivereloadInject = (files: TProcessorThreadContext['files']) => files.forEach(file => {
+	if (checkFileIsCss(file)) {
+		return livereloadService.injectCss(file.path);
+	}
+	if (checkFileIsImg(file)) {
+		return livereloadService.injectImg(file.path);
+	}
+})
+
 const handleLivereloadTask = ({ files, livereload: { action } }: TProcessorThreadContext) => {
 	switch (action) {
 		case 'reload': return livereloadService.reloadPage();
-		case 'inject': return files
-			.filter(file => file.ext === '.css')
-			.forEach(file => livereloadService.applyCss(file.path));
+		case 'inject': return handleLivereloadInject(files);
 	}
 }
 

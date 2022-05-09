@@ -23,7 +23,7 @@ export default class File implements ParsedPath {
 	}
 
 	public get path(): string {
-		return this.dist.path || path.join(this.dir, this.name, this.ext);
+		return this.dist.path || path.join(this.dir, `${this.name}${this.ext}`);
 	}
 	public get name(): string {
 		return this.dist.name || this.source.name;
@@ -44,7 +44,7 @@ export default class File implements ParsedPath {
 	}
 
 	public setExt(value: File['ext']): File {
-		this.dist.ext = value;
+		this.dist.ext = value[0] === '.' ? value : `.${value}`;
 		return this;
 	}
 	public setPath(value: File['path']): File {
@@ -55,13 +55,15 @@ export default class File implements ParsedPath {
 		this.dist.name = value;
 		return this;
 	}
+	public setDir(value: File['dir']): File {
+		this.dist.dir = value;
+		return this;
+	}
 
 	public insert({ dir, name, ext }: Partial<Pick<File, 'dir' | 'name' | 'ext'>>): File {
-		Object.assign(this.dist, {
-			dir: dir ?? this.dist.dir,
-			name: name ?? this.dist.name,
-			ext: ext ?? this.dist.ext
-		});
+		name && this.setName(name);
+		dir && this.setDir(dir);
+		ext && this.setExt(ext);
 
 		return this;
 	}

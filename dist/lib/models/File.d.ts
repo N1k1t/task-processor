@@ -16,5 +16,6 @@ export default class File implements ParsedPath {
     setExt(value: File['ext']): File;
     setPath(value: File['path']): File;
     setName(value: File['name']): File;
+    setDir(value: File['dir']): File;
     insert({ dir, name, ext }: Partial<Pick<File, 'dir' | 'name' | 'ext'>>): File;
 }

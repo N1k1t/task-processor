@@ -26,5 +26,6 @@ export const livereloadService: ILivereloadService = {
 
 	callCommand: () => logServerWasNotStarted(),
 	reloadPage: () => logServerWasNotStarted(),
-	applyCss: () => logServerWasNotStarted()
+	injectCss: () => logServerWasNotStarted(),
+	injectImg: () => logServerWasNotStarted()
 }

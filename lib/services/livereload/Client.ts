@@ -62,7 +62,8 @@ export const handleClientConnect = async (port: number) => {
 
 			callCommand: callClientCommand(connection),
 			reloadPage: () => callClientCommand(connection)('reload', { path: '/' }),
-			applyCss: filePath => callClientCommand(connection)('reload', { path: filePath, liveCSS: true })
+			injectCss: filePath => callClientCommand(connection)('reload', { path: filePath, liveCSS: true }),
+			injectImg: filePath => callClientCommand(connection)('reload', { path: filePath, liveImg: true })
 		});
 	});
 
