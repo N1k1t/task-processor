@@ -64,7 +64,7 @@ registerBackgroundTasks([
 ```
 
 ### How to: `Use Livereload for the dynamic injection of CSS`
-1. First, you need install a livereload plugin for your browser. Here is the [Plugin for Google Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=ru)
+1. First, you need to install a livereload plugin for your browser. Here is the [Plugin for Google Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=ru)
 2. Turn on the livereload plugin on the page which using bundled `sass` files
 3. Write some code
 ```js
