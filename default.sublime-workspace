@@ -1,0 +1,1447 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"exec",
+				"execPath"
+			],
+			[
+				"use",
+				"useThreads"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"TLi",
+				"TLivereloadServerCommandName"
+			],
+			[
+				"li",
+				"livereloadService"
+			],
+			[
+				"ws",
+				"wsServer"
+			],
+			[
+				"TL",
+				"TLivereloadCommand"
+			],
+			[
+				"TLivereloadComm",
+				"TLivereloadCommandType"
+			],
+			[
+				"conn",
+				"connect"
+			],
+			[
+				"conne",
+				"connect"
+			],
+			[
+				"handle",
+				"handleServerConnection"
+			],
+			[
+				"co",
+				"connected"
+			],
+			[
+				"sen",
+				"sendUTF"
+			],
+			[
+				"I",
+				"IWebSocketServerRounter"
+			],
+			[
+				"TWeb",
+				"TWebSocketServerCommandHandler"
+			],
+			[
+				"TWe",
+				"TWebSocketServerCommandHandler"
+			],
+			[
+				"call",
+				"callCommand"
+			],
+			[
+				"serv",
+				"serverName"
+			],
+			[
+				"server",
+				"serverName"
+			],
+			[
+				"web",
+				"webSocketServerMessageHandler"
+			],
+			[
+				"WebS",
+				"WebSocketClient"
+			],
+			[
+				"Web",
+				"WebSocketServer"
+			],
+			[
+				"isM",
+				"isMainThread"
+			],
+			[
+				"isMa",
+				"isMainThread"
+			],
+			[
+				"TT",
+				"TThredWorkerFn"
+			],
+			[
+				"commb",
+				"comm-block"
+			],
+			[
+				"useIn",
+				"useInSlaveThread"
+			],
+			[
+				"in",
+				"instance"
+			],
+			[
+				"fi",
+				"find"
+			],
+			[
+				"ins",
+				"instance"
+			],
+			[
+				"Pa",
+				"Partial"
+			],
+			[
+				"un",
+				"unknown"
+			],
+			[
+				"Par",
+				"Partial"
+			],
+			[
+				"exe",
+				"execPath"
+			],
+			[
+				"T",
+				"TTask"
+			],
+			[
+				"thre",
+				"threadsPool"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"IT",
+				"ITaskHandlerDetails"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"TP",
+				"TProcessorOptions"
+			],
+			[
+				"ex",
+				"extends"
+			],
+			[
+				"regi",
+				"registerCliTasks"
+			],
+			[
+				"TReg",
+				"TRegisterCliTasksFn"
+			],
+			[
+				"TRegi",
+				"TRegisterCliTasksFn"
+			],
+			[
+				"regis",
+				"registerCliTasks"
+			],
+			[
+				"regul",
+				"regularOperations"
+			],
+			[
+				"moment",
+				"momentDate"
+			],
+			[
+				"times",
+				"timestamp"
+			],
+			[
+				"logg",
+				"loggerHeader"
+			],
+			[
+				"Sto",
+				"StorageSection"
+			],
+			[
+				"gr",
+				"groupStatus"
+			],
+			[
+				"op",
+				"operationStatus"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"file",
+				"fileStream"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"che",
+				"checkSyntaxError"
+			],
+			[
+				"uni",
+				"uniq"
+			],
+			[
+				"log",
+				"logTaskHasBeenDone"
+			],
+			[
+				"task",
+				"taskDetails"
+			],
+			[
+				"Con",
+				"IProcessorRunnerContext"
+			],
+			[
+				"getFil",
+				"getFilesResult"
+			],
+			[
+				"cl",
+				"cloneDeep"
+			],
+			[
+				"getFi",
+				"getFilesProcessor"
+			],
+			[
+				"Re",
+				"Required"
+			],
+			[
+				"s",
+				"stringify"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"se",
+				"sendUTF"
+			],
+			[
+				"pa",
+				"pathname"
+			],
+			[
+				"In",
+				"IncomingMessage"
+			],
+			[
+				"Requ",
+				"ClientRequestArgs"
+			],
+			[
+				"Server",
+				"ServerResponse"
+			],
+			[
+				"Cli",
+				"ClientRequest"
+			],
+			[
+				"Ser",
+				"ServerResponse"
+			],
+			[
+				"p",
+				"pathname"
+			],
+			[
+				"pars",
+				"parseUrl"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"wri",
+				"write"
+			],
+			[
+				"readFile",
+				"readFileSync"
+			],
+			[
+				"read",
+				"readFileSync"
+			],
+			[
+				"send",
+				"sendUTF"
+			],
+			[
+				"Me",
+				"IUtf8Message"
+			],
+			[
+				"o",
+				"on"
+			],
+			[
+				"cre",
+				"createServer"
+			],
+			[
+				"Cre",
+				"CreateServerConfig"
+			],
+			[
+				"crea",
+				"createServer"
+			],
+			[
+				"IP",
+				"IProcessorRunnerContext"
+			],
+			[
+				"IPoroce",
+				"IProcessorContext"
+			],
+			[
+				"Str",
+				"StringOptions"
+			],
+			[
+				"set",
+				"setExt"
+			],
+			[
+				"compileS",
+				"compileStringAsync"
+			],
+			[
+				"buil",
+				"buildProcessor"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"dis",
+				"discount_amount"
+			],
+			[
+				"disco",
+				"discountAmount"
+			],
+			[
+				"Ima",
+				"openImageLibrary"
+			],
+			[
+				"PRO",
+				"PROXY_HOST"
+			],
+			[
+				"chu",
+				"chunkData"
+			],
+			[
+				"PROX",
+				"PROXY_PORT"
+			],
+			[
+				"PROXY_",
+				"PROXY_HOST"
+			],
+			[
+				"a",
+				"argv"
+			],
+			[
+				"His",
+				"HistoryNavigator"
+			],
+			[
+				"his",
+				"history_navigation"
+			],
+			[
+				"debu",
+				"debuggable"
+			],
+			[
+				"styl",
+				"styles"
+			],
+			[
+				"fo",
+				"fontWeight"
+			],
+			[
+				"upda",
+				"uploadResponse"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"resu",
+				"resultImage"
+			],
+			[
+				"write",
+				"writeFile"
+			],
+			[
+				"category",
+				"category_forms\tdirectory"
+			],
+			[
+				"categ",
+				"categories_service\tscript"
+			],
+			[
+				"number",
+				"numberLength"
+			],
+			[
+				"Mod",
+				"TestingModule\tclass"
+			],
+			[
+				"modu",
+				"moduleRef\tlet"
+			],
+			[
+				"impo",
+				"imports\tproperty"
+			],
+			[
+				"im",
+				"import\timports a module …"
+			],
+			[
+				"Data",
+				"DatabaseServiceMock\tclass"
+			],
+			[
+				"isSame",
+				"isSameDate"
+			],
+			[
+				"transa",
+				"transaction"
+			],
+			[
+				"mome",
+				"momentDate"
+			],
+			[
+				"yes",
+				"yesterdayTimestamp"
+			],
+			[
+				"tim",
+				"timestamp"
+			],
+			[
+				"current",
+				"currentTimestamp"
+			],
+			[
+				"user",
+				"userId\tlet"
+			],
+			[
+				"dat",
+				"databaseService\tproperty"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"get",
+				"getTypeDefs\tmethod"
+			],
+			[
+				"Grap",
+				"GraphQLFormattedError\talias"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1393,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"left_delete",
+					null,
+					"AQAAADcAAAAAAAAANwAAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAAOAAAAAAAAAA4AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "4"
+					},
+					"AQAAADcAAAAAAAAAOAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwAAAAAAAAA3AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"left_delete",
+					null,
+					"AQAAADcAAAAAAAAANwAAAAAAAAABAAAANA",
+					"AQAAAAAAAAABAAAAOAAAAAAAAAA4AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "5"
+					},
+					"AQAAADcAAAAAAAAAOAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwAAAAAAAAA3AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAABxBQAAewogICJuYW1lIjogIkBuMWsxdC90YXNrLXByb2Nlc3NvciIsCiAgInZlcnNpb24iOiAiMC4xLjUiLAogICJkZXNjcmlwdGlvbiI6ICJSdW5uZXIgZm9yIGJhY2tncm91bmQgYW5kIGNsaSB0YXNrcyB3aXRoIFNBU1MvQ29tbW9uSlMgYnVuZGxlcnMgdXNpbmcgbmF0aXZlIG11bHRpdGhyZWFkaW5nIiwKICAibWFpbiI6ICJkaXN0L2xpYi9pbmRleC5qcyIsCiAgInNjcmlwdHMiOiB7CiAgICAic3RhcnQiOiAibm9kZSBkaXN0L2xpYi9pbmRleCIsCiAgICAiZGV2IjogIm5vZGVtb24gZGlzdC9saWIvaW5kZXgiLAogICAgInRlc3QiOiAibm9kZW1vbiB0ZXN0L2luZGV4IiwKICAgICJ0cy1zZXJ2ZSI6ICJucHggdHNjIC13IiwKICAgICJidWlsZCI6ICJucHggdHNjIC0tYnVpbGQiCiAgfSwKICAibm9kZW1vbkNvbmZpZyI6IHsKICAgICJpZ25vcmUiOiBbCiAgICAgICIqLnRzIiwKICAgICAgInRlc3Qvc3JjLyoiLAogICAgICAidGVzdC9kZXN0LyoiCiAgICBdCiAgfSwKICAiYXV0aG9yIjogIm4xazF0IiwKICAibGljZW5zZSI6ICJJU0MiLAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHR5cGVzL21pbmltYXRjaCI6ICJeMy4wLjUiLAogICAgIkB0eXBlcy90Y3AtcG9ydC11c2VkIjogIl4xLjAuMSIsCiAgICAiQHR5cGVzL2Jyb3dzZXJpZnkiOiAiXjEyLjAuMzciLAogICAgIkB0eXBlcy9jaG9raWRhciI6ICJeMi4xLjMiLAogICAgIkB0eXBlcy9nbG9iIjogIl43LjIuMCIsCiAgICAiQHR5cGVzL2dyYWRpZW50LXN0cmluZyI6ICJeMS4xLjIiLAogICAgIkB0eXBlcy9sb2Rhc2giOiAiXjQuMTQuMTgyIiwKICAgICJAdHlwZXMvbm9kZSI6ICJeMTcuMC4yOSIsCiAgICAiQHR5cGVzL3Nhc3MiOiAiXjEuNDMuMSIsCiAgICAiQHR5cGVzL3N5bnRheC1lcnJvciI6ICJeMS40LjEiLAogICAgIkB0eXBlcy93ZWJzb2NrZXQiOiAiXjEuMC41IiwKICAgICJodXNreSI6ICJeNy4wLjQiLAogICAgImxpbnQtc3RhZ2VkIjogIl4xMi40LjEiLAogICAgIm5vZGVtb24iOiAiXjIuMC4xNSIsCiAgICAidHlwZXNjcmlwdCI6ICJeNC41LjUiCiAgfSwKICAiZGVwZW5kZW5jaWVzIjogewogICAgImJyb3dzZXJpZnkiOiAiXjE3LjAuMCIsCiAgICAiY2hva2lkYXIiOiAiXjMuNS4zIiwKICAgICJjb2xvcnMiOiAiXjEuNC4wIiwKICAgICJnbG9iIjogIl44LjAuMSIsCiAgICAiZ3JhZGllbnQtc3RyaW5nIjogIl4yLjAuMCIsCiAgICAibG9kYXNoIjogIl40LjE3LjIxIiwKICAgICJtaW5pbWF0Y2giOiAiXjUuMC4xIiwKICAgICJzYXNzIjogIl4xLjUxLjAiLAogICAgInN5bnRheC1lcnJvciI6ICJeMS40LjAiLAogICAgInRjcC1wb3J0LXVzZWQiOiAiXjEuMC4yIiwKICAgICJ0aHJlYWRzIjogIl4xLjcuMCIsCiAgICAid2Vic29ja2V0IjogIl4xLjAuMzQiCiAgfQp9CgAAAAAAAAAAcQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOAAAAAAAAAA4AAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 4230,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAN8AAAAAAAAA4AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3wAAAAAAAADfAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAGYDAAAAAAAAZwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZgMAAAAAAABmAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAFEFAAAAAAAAUgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUQUAAAAAAABRBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAABUJAAAAAAAAFgkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFQkAAAAAAAAVCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAHYMAAAAAAAAdwwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgwAAAAAAAB2DAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAK8NAAAAAAAAsA0AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArw0AAAAAAACvDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAEYQAAAAAAAARxAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARhAAAAAAAABGEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAKEHAAAAAAAAogcAAAAAAAAAAAAAogcAAAAAAACkBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoQcAAAAAAAChBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAALoHAAAAAAAAugcAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAAvAcAAAAAAAC8BwAAAAAAAAAAAAAAADBA"
+				],
+				[
+					46,
+					1,
+					"left_delete",
+					null,
+					"AQAAALkHAAAAAAAAuQcAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAugcAAAAAAAC6BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					47,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAALkHAAAAAAAAugcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQcAAAAAAAC5BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAEkKAAAAAAAASgoAAAAAAAAAAAAASgoAAAAAAABMCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQoAAAAAAABJCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					55,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJgKAAAAAAAAmAoAAAAAAAACAAAAICCXCgAAAAAAAJcKAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAmgoAAAAAAACaCgAAAAAAAAAAAAAAADBA"
+				],
+				[
+					58,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAJcKAAAAAAAAmAoAAAAAAAAAAAAAmAoAAAAAAACaCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwoAAAAAAACXCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAOUKAAAAAAAA5goAAAAAAAAAAAAA5goAAAAAAADoCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5QoAAAAAAADlCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJgKAAAAAAAAmAoAAAAAAAACAAAAICCXCgAAAAAAAJcKAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAmgoAAAAAAACaCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					69,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAKIKAAAAAAAAowoAAAAAAAAAAAAAowoAAAAAAAClCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAogoAAAAAAACiCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					71,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAOYKAAAAAAAA5goAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAA6AoAAAAAAADoCgAAAAAAAAAAAAAAADBA"
+				],
+				[
+					72,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOUKAAAAAAAA5QoAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAA5goAAAAAAADmCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					75,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAOgKAAAAAAAA6QoAAAAAAAAAAAAA6QoAAAAAAADrCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6AoAAAAAAADoCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAFsKAAAAAAAAXAoAAAAAAAAAAAAAXAoAAAAAAABeCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWwoAAAAAAABbCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					84,
+					1,
+					"insert",
+					{
+						"characters": "\n\t"
+					},
+					"BAAAAOEPAAAAAAAA4g8AAAAAAAAAAAAA4g8AAAAAAADoDwAAAAAAAAAAAABcCgAAAAAAAFwKAAAAAAAAAgAAACAg5g8AAAAAAADoDwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4Q8AAAAAAADhDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					87,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAAEQAAAAAAAAAhAAAAAAAAAAAAAAAhAAAAAAAAAKEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAABkQAAAAAAAAGhAAAAAAAAAAAAAAGhAAAAAAAAAiEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGRAAAAAAAAAZEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					93,
+					1,
+					"left_delete",
+					null,
+					"AQAAACAQAAAAAAAAIBAAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAAIhAAAAAAAAAiEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"cut",
+					null,
+					"AQAAACIQAAAAAAAAIhAAAAAAAAAvAAAALy8gVXNlIHR5cGUgInJlbG9hZCIgaXQgZm9yIHRoZSBwYWdlIHJlZnJlc2hpbmc",
+					"AQAAAAAAAAABAAAAIhAAAAAAAABREAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"left_delete",
+					null,
+					"AQAAACEQAAAAAAAAIRAAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAIhAAAAAAAAAiEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"paste",
+					null,
+					"AQAAABkQAAAAAAAASBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGRAAAAAAAAAZEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					120,
+					1,
+					"insert",
+					{
+						"characters": " to"
+					},
+					"AwAAAJ8FAAAAAAAAoAUAAAAAAAAAAAAAoAUAAAAAAAChBQAAAAAAAAAAAAChBQAAAAAAAKIFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnwUAAAAAAACfBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					121,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAKIFAAAAAAAAowUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAogUAAAAAAACiBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					122,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKIFAAAAAAAAogUAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAowUAAAAAAACjBQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"refe",
+				"TypeScript: Find References"
+			],
+			[
+				"typescript",
+				"TypeScript: Show Error List"
+			],
+			[
+				"mdp",
+				"Markdown Preview: Preview in Browser"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Works/WEB/_npm/some-async-chain"
+	],
+	"file_history":
+	[
+		"/C/Works/WEB/_npm/dev-processor/lib/index.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/Thread.ts",
+		"/C/Works/WEB/project.fin-app/package.json",
+		"/C/Works/WEB/_npm/dev-processor/lib/typings/Etc.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/config/index.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/Watcher.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/typings/Task.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/typings/Processor.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/index.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/TaskWorker.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/Console.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/typings/index.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/test/index.js",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/Middleware.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/livereload/index.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/typings/Livereload.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/livereload/Client.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/livereload/Server.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/Livereload.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/livereload/Service.ts",
+		"/C/Works/WEB/_npm/dev-processor/.gitignore",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/websocket/index.d.ts",
+		"/C/Works/WEB/project.fin-app/task-processor.js",
+		"/C/Works/WEB/project.fin-app/.gitignore",
+		"/C/Works/WEB/_npm/dev-processor/lib/helpers/index.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/TaskHandler.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/index.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/Context.ts",
+		"/C/Works/WEB/project.fin-app/src/app/styles/_money-stat-panel.scss",
+		"/C/Works/WEB/project.fin-app/dist/editor.html",
+		"/C/Works/WEB/project.fin-app/dist/auth.html",
+		"/C/Works/WEB/project.fin-app/dist/app.html",
+		"/C/Works/WEB/project.fin-app/src/app/styles/app.scss",
+		"/C/Works/WEB/project.fin-app/.editorconfig",
+		"/C/Works/WEB/project.fin-app/src/app/styles/auth.scss",
+		"/C/Works/WEB/_npm/dev-processor/package.json",
+		"/C/Works/WEB/_npm/dev-processor/lib/services/LivereloadServer.ts",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/websocket/lib/WebSocketClient.js",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/typescript/lib/protocol.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/threads/dist/worker/index.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/lib/typings/Helpers.ts",
+		"/C/Works/WEB/_npm/dev-processor/test/tasks.js",
+		"/C/Works/WEB/project.fin-app/src/app/index.js",
+		"/C/Works/WEB/project.fin-app/src/app/controllers/index.js",
+		"/C/Works/WEB/project.fin-app/dev-processor.js",
+		"/C/Works/WEB/project.fin-app/src/app/services/calc.js",
+		"/C/Works/WEB/project.fin-app/src/app/controllers/draw.js",
+		"/C/Works/WEB/project.fin-app/src/app/utils/index.js",
+		"/C/Works/WEB/project.fin-app/src/app/services/storage.js",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/CommonjsBundle.ts",
+		"/C/Works/WEB/project.fin-app/src/app/components/money-flow-operation/index.js",
+		"/C/Works/WEB/project.fin-app/src/app/components/money-regular-operation/index.js",
+		"/C/Works/WEB/project.fin-app/src/app/models/component.js",
+		"/C/Works/WEB/project.fin-app/src/app/components/money-stat/index.js",
+		"/C/Works/WEB/project.fin-app/src/app/components/money-stat-panel/index.js",
+		"/C/Works/WEB/_npm/some-dev-chain/src/tools/sass.js",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/SassBundle.ts",
+		"/C/Works/WEB/project.fin-app/src/app/services/index.js",
+		"/C/Works/WEB/project.fin-app/.env",
+		"/C/Works/WEB/project.fin-app/src/app/models/cache.js",
+		"/C/Works/WEB/_npm/some-dev-chain/src/tools/browserify.js",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/browserify/index.d.ts",
+		"/C/Works/WEB/project.fin-app/src/app/models/storage.js",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/GetFiles.ts",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/threads/dist/master/pool.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/sass/types/options.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/rollup-plugin-node-builtins/node_modules/rollup/dist/rollup.d.ts",
+		"/C/Works/WEB/project.fin-app/src/app/styles/_mixins.scss",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/node/path.d.ts",
+		"/C/Works/WEB/project.fin-app/src/app/styles/_variables.scss",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/nodemon/node_modules/minimatch/minimatch.js",
+		"/C/Works/WEB/_npm/dev-processor/test/src/some.scss",
+		"/C/Works/WEB/_npm/dev-processor/lib/processors/WriteFiles.ts",
+		"/C/Works/WEB/_npm/dev-processor/test/src/some-2.scss",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/node/http.d.ts",
+		"/C/Program Files (x86)/Steam/steamapps/common/Fallout 3 goty/Fallout_default.ini",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/websocket/lib/WebSocketServer.js",
+		"/C/Works/WEB/project.fin-app/nginx.conf",
+		"/C/bin/bash/nginx-t",
+		"/C/bin/bash/nginx-start",
+		"/C/bin/bash/nginx-reload",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/livereload/index.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/test/src/test.js",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/@types/node/util.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/test/src/some-module.js",
+		"/C/nginx/conf/nginx.conf",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/sass/types/util/promise_or.d.ts",
+		"/C/Works/WEB/_npm/dev-processor/node_modules/sass/types/compile.d.ts",
+		"/C/Users/n1k1t/.ubuntu/.bashrc",
+		"/C/Users/n1k1t/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json",
+		"/?wsl.localhost/Ubuntu-18.04/home/n1k1t/.profile",
+		"/C/Users/n1k1t/.bashrc",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/config/hooks.ts",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/node_modules/react-native-image-picker/lib/typescript/index.d.ts",
+		"/C/Works/WEB/project.easy-pay/mpos-react-native/ios/Frameworks/Samples/ShareIt/ShareIt/SIPhoto.m",
+		"/C/Works/WEB/project.easy-pay/playground/app/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/app.tsx",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/components/employee_form/index.tsx",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/flows/pin_recovery/pin_recovery/index.tsx",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/flows/password_recovery/password_recovery/index.tsx",
+		"/C/Works/WEB/project.easy-pay/mpos-react-native/src/config/enums.js",
+		"/C/Works/WEB/project.easy-pay/ngrok-proxy/src/index.js",
+		"/C/Works/WEB/project.easy-pay/_helpers/proxy-logger/index.js",
+		"/C/Users/n1k1t/AppData/Roaming/Sublime Text/Packages/User/Terminal.sublime-settings",
+		"/C/Works/WEB/project.easy-pay/questions.txt",
+		"/C/Works/WEB/project.easy-pay/server-structure/services/ep-payment-faspay/config.env",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/.env.dev",
+		"/C/Works/WEB/project.easy-pay/mpos-react-native/android/app/src/main/AndroidManifest.xml",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/package.json",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/navigation/settings_navigator/screens/printer/index.tsx",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/android/app/src/main/AndroidManifest.xml",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/services/lock_service.ts",
+		"/C/Works/WEB/project.easy-pay/kiosk/src/config/api.js",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/navigation/main_navigator/index.tsx",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/yarn.lock",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/assets/dictionaries/en.json",
+		"/C/Works/WEB/project.easy-pay/kiosk/src/config/constants.js",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/android/build.gradle",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/android/app/build.gradle",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/android/app/src/main/java/com/pvp/posy/MainApplication.java",
+		"/C/Works/WEB/project.easy-pay/kiosk/middleware-server/sockets.js",
+		"/C/Works/WEB/project.easy-pay/kiosk/src/utils/sockets.js",
+		"/C/Works/WEB/project.easy-pay/kiosk/src/components/GlobalHOC.js",
+		"/C/Works/WEB/project.easy-pay/kiosk/src/context/index.js",
+		"/C/Works/WEB/project.easy-pay/kiosk/src/pages/index.js",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/config/exceptionHandler.ts",
+		"/C/Works/WEB/project.easy-pay/posy-react-native/src/config/apollo_gql_tags.ts",
+		"/C/Works/WEB/project.easy-pay/kiosk/.env-cmdrc.json"
+	],
+	"find":
+	{
+		"height": 27.2
+	},
+	"find_in_files":
+	{
+		"height": 368.0,
+		"where_history":
+		[
+			"C:\\Works\\WEB\\_npm\\dev-processor\\lib,<project filters>",
+			"C:\\Works\\WEB\\project.fin-app\\src,<project filters>",
+			"C:\\Works\\WEB\\_npm\\dev-processor\\node_modules\\browserify,<project filters>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"IWebSocketServerRounter",
+			"webSocketServerCommandHandlers",
+			"webSocketMessageHandler",
+			"webSocketCommandHandlers",
+			"TFunc",
+			"}\n",
+			"runTaskProcess",
+			"null | void",
+			"void | null",
+			"context",
+			"getRegularReport",
+			"inputRegularOperations",
+			"getMonthlyOperationsReport",
+			"defaultValue",
+			"balance",
+			"getBalanceValue",
+			"custom",
+			"getPlannedBalance",
+			"settedAt",
+			"usedTimestamp",
+			"$contaner",
+			"$container",
+			"$contaner",
+			"treads",
+			"storage.",
+			").get()",
+			"storage.",
+			"this.values",
+			").get()",
+			"storage",
+			"cache",
+			").get()",
+			"storage.",
+			").get()",
+			"storageService(",
+			"storage.",
+			"cache.",
+			"cache",
+			"storage",
+			"group",
+			"group!\\w",
+			"group",
+			"status: 'enabled', ",
+			"status",
+			"enabled",
+			"_readableState",
+			"isStream",
+			", ",
+			"IMiddlewareOptions",
+			"result",
+			"context",
+			"WriteFiles"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"IWebSocketRounter",
+			"webSocketCommandHandlers",
+			"webSocketServerMessageHandler",
+			"webSocketServerCommandHandlers",
+			"runTask",
+			"runnerContext",
+			"inputedRegularOperations",
+			"initialValues",
+			"currentTimestamp",
+			"$container",
+			"threads",
+			"storageService.get('",
+			").values()",
+			"storageService.get('",
+			"this._values",
+			").values()",
+			"storageService.get('",
+			"cacheService",
+			").values()",
+			"storageService.get('",
+			").values()",
+			"storageService.get(",
+			"storageService('",
+			"cacheService.",
+			"cacheService",
+			"storageService",
+			"",
+			"', '",
+			"ILivereloadOptions",
+			"context",
+			"runnerContext",
+			"Middleware"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Works\\WEB\\project.solidity"
+		},
+		{
+			"path": "C:\\Users\\n1k1t\\.ubuntu"
+		},
+		{
+			"path": "C:\\Works\\WEB\\project.fin-app"
+		},
+		{
+			"path": "C:\\bin\\bash"
+		},
+		{
+			"path": "C:\\Works\\WEB\\_npm\\some-dev-chain"
+		},
+		{
+			"path": "C:\\Works\\WEB\\_npm\\some-async-chain"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"lsp_uri": "file:///C:/Works/WEB/_npm/dev-processor/package.json",
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1717,
+								1717
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/Works/WEB/_npm/dev-processor/README.md",
+							"parser": "github",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"target": "disk",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 812.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.2
+	},
+	"input":
+	{
+		"height": 102.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.diagnostics":
+	{
+		"height": 132.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.errorlist":
+	{
+		"height": 162.0
+	},
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 162.0
+	},
+	"output.references":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 51.2
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"trans ser",
+				"ep-webpos-service\\src\\services\\transactions_service.js"
+			],
+			[
+				"ep_age",
+				"ep-webpos-service\\src\\database\\models\\ep_agents.js"
+			],
+			[
+				"ep_",
+				"project.easy-pay\\ep-webpos-service\\src\\database\\models\\ep_agents.js"
+			],
+			[
+				"ep_agents",
+				"project.easy-pay\\ep-webpos-service\\src\\database\\models\\ep_agents.js"
+			],
+			[
+				"agent_v2",
+				"ep-webpos-service\\src\\network\\controllers\\agent_v2_controller.js"
+			],
+			[
+				"agent_v",
+				"ep-webpos-service\\src\\network\\controllers\\agent_v2_controller.js"
+			],
+			[
+				"check_double_",
+				"ep-webpos-service\\test\\unit\\processing\\check\\check_double_transaction.test.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 353.745454545,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 573.818181818
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

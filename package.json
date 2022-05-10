@@ -2,14 +2,24 @@
   "name": "@n1k1t/task-processor",
   "version": "0.1.8",
   "description": "Runner for background and cli tasks with SASS/CommonJS bundlers using native multithreading",
-  "main": "dist/lib/index.js",
+  "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
   "scripts": {
-    "start": "node dist/lib/index",
-    "dev": "nodemon dist/lib/index",
-    "test": "nodemon test/index",
-    "ts-serve": "npx tsc -w",
-    "build": "npx tsc --build"
+    "dev": "nodemon test/index",
+    "ts-watch": "npx tsc -w",
+    "build": "npx tsc",
+    "ts-check": "npx tsc --build --clean",
+    "prepare": "npx husky install && npm run build",
+    "preversion": "npm run build",
+    "version": "git add -A .",
+    "postversion": "git push && git push --tags"
   },
+  "files": [
+    "lib/**/*"
+  ],
+  "tags": [
+    "bundle"
+  ],
   "nodemonConfig": {
     "ignore": [
       "*.ts",

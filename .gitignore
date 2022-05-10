@@ -1,4 +1,3 @@
-node_modules/
-test/
-
-*.sublime*
+node_modules
+test
+lib

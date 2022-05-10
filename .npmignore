@@ -1,0 +1,6 @@
+.husky
+src
+test
+
+.editorconfig
+tsconfig.json

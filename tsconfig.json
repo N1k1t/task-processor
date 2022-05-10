@@ -10,7 +10,7 @@
     "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
-    "outDir": "./dist",                        /* Redirect output structure to the directory. */
+    "outDir": "./lib",                        /* Redirect output structure to the directory. */
     "rootDir": ".",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     "removeComments": false,                /* Do not emit comments to output. */
     "resolveJsonModule": true,
@@ -61,9 +61,8 @@
     "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
   },
   "include": [
-    "config/**/*.ts",
-    "lib/**/*.ts",
-    "typings/**/*.d.ts",
+    "src/**/*.ts",
+    "typings/**/*.d.ts"
   ],
   "exclude": [
     // "dist/**",
