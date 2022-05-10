@@ -15,7 +15,8 @@
     "postversion": "git push && git push --tags"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "assets/**/*"
   ],
   "tags": [
     "bundle"
