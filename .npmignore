@@ -2,5 +2,7 @@
 src
 test
 
-.editorconfig
 tsconfig.json
+
+.editorconfig
+.npmrc
