@@ -36,7 +36,7 @@ const addFilesToContext = async (task: ITask, details: ITaskHandlerDetails, runn
 /*----------  Exports  ----------*/
 
 export const runTask: ITaskHandler['runTask'] = async (inputedTask, details) => {
-	loadTasksContext(details.config.execPath);
+	loadTasksContext(details.config.get('execPath'));
 
 	const task = getTaskContext(details.type, inputedTask);
 	const runnerContext = buildProcessorRunnerContext();

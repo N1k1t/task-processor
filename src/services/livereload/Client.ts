@@ -28,7 +28,7 @@ const handleClientDisconnect = async () => {
 	logger.info('Trying to start up server localy...'.gray);
 
 	return new Promise(resolve => {
-		wsServer.once('request', () => setTimeout(() => resolve(null), config.livereloadReconnectDelayMs));
+		wsServer.once('request', () => setTimeout(() => resolve(null), config.get('livereloadReconnectDelayMs')));
 		return handleServerConnect(port);
 	});
 }

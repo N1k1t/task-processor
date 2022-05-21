@@ -20,7 +20,7 @@ type TTaskHandlerResult = Promise<(TProcessorThreadContext | null)[] | null>
 const logger = buildLogger(`Master`, 'green');
 
 const checkFileIsCss = (file: TProcessorThreadFile) => file.ext === '.css';
-const checkFileIsImg = (file: TProcessorThreadFile) => config.sharpImageFormats.includes(file.ext);
+const checkFileIsImg = (file: TProcessorThreadFile) => config.get('sharpImageFormats').includes(file.ext);
 
 const handleLivereloadInject = (files: TProcessorThreadContext['files']) => files.forEach(file => {
 	if (checkFileIsCss(file)) {
@@ -41,7 +41,7 @@ const handleLivereloadTask = ({ files, livereload: { action } }: TProcessorThrea
 const prepareTaskToThread = (task: ITask): TObject => JSON.parse(JSON.stringify(task));
 
 const processTask = async (task: ITask, details: ITaskHandlerDetails): Promise<TProcessorThreadContext | null> => {
-	const context = config.useThreads
+	const context = config.get('useThreads')
 		? await queueThread<TProcessorThreadContext | null>(worker => worker.runTask(<any>prepareTaskToThread(task), details))
 		: await runTask(task, details);
 

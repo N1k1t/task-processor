@@ -23,7 +23,7 @@ export const setupTaskWatcher = (task: IBackgroundTask, handler: (filePath?: str
 		return logger.error('Not found any watch matches for task'.red, `"${task.name}"`.cyan.bold);
 	}
 
-	const watcher = watch(watchMatches, { ignored: config.defaultIgnoredDirs.concat(ignoreList) });
+	const watcher = watch(watchMatches, { ignored: config.get('defaultIgnoredDirs').concat(ignoreList) });
 
 	logger.info('Task'.gray, `"${task.name}"`.cyan.bold, 'is watching for:'.gray, _.flatten([watchMatches]).join());
 

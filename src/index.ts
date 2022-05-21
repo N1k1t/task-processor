@@ -33,7 +33,7 @@ const getTaskFilePaths = async (task: ICliTask): Promise<null | string[]> => {
 	const filesToAdd = _.flatten([_.get(task.add, 'path', task.add)]);
 	const ignoreList = _.flatten([_.get(task.add, 'ignore', [])]);
 	const results = await Promise.all(filesToAdd.map(match => findFiles(<string>match, {
-		ignore: config.defaultIgnoredDirs.concat(ignoreList)
+		ignore: config.get('defaultIgnoredDirs').concat(ignoreList)
 	})));
 
 	return _.uniq(_.flatten(results));
