@@ -1,5 +1,12 @@
 import _ from 'lodash';
 
+/*----------  Typings  ----------*/
+
+type TConfig = typeof config
+type TConfigKeys = keyof TConfig
+
+/*----------  Module deps  ----------*/
+
 const config = {
 	defaultIgnoredDirs: ['node_modules/', '.git/'],
 	livereloadReconnectDelayMs: 1000,
@@ -12,8 +19,10 @@ const config = {
 	execPath: 'unknown'
 };
 
+/*----------  Exports  ----------*/
+
 export default {
-	assign: (values: Partial<typeof config>) => Object.assign(config, values),
-	set: <T extends keyof typeof config>(key: T, value: typeof config[T]) => _.set(config, String(key), value),
-	get: <T extends keyof typeof config>(key: T): typeof config[T] => _.get(config, String(key))
+	assign: (values: Partial<TConfig>) => Object.assign(config, values),
+	set: <T extends TConfigKeys>(key: T, value: TConfig[T]) => _.set(config, String(key), value),
+	get: <T extends TConfigKeys>(key: T): TConfig[T] => _.get(config, String(key))
 }

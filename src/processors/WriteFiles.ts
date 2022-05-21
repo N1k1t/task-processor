@@ -10,7 +10,7 @@ export interface IWriteFilesOptions {
 
 const handler: TProcessorGenerator<IWriteFilesOptions> = ({ logger }) => async ({ files }, { dir, name, ext }) => {
 	for (const file of files) {
-		file.insert({ dir, name, ext });
+		file.assign({ dir, name, ext });
 
 
 		await fs.writeFile(file.path, file.content).catch(error => {

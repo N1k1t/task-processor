@@ -60,7 +60,7 @@ export default class File implements ParsedPath {
 		return this;
 	}
 
-	public insert({ dir, name, ext }: Partial<Pick<File, 'dir' | 'name' | 'ext'>>): File {
+	public assign({ dir, name, ext }: Partial<Pick<File, 'dir' | 'name' | 'ext'>>): File {
 		name && this.setName(name);
 		dir && this.setDir(dir);
 		ext && this.setExt(ext);
